@@ -29,7 +29,7 @@ Compliance testing is **to check whether the processor under development meets t
 RISCOF framework is used which is a python based framework that enables testing of a RISC-V target (hard or soft implementations) against a standard RISC-V golden reference model using a suite of RISC-V architectural assembly tests.For more information please visit [RISCOF](https://riscof.readthedocs.io/en/latest/intro.html) 
 > In our case, we have compared our designed RTL  with golden reference model named sail
 
-## Result
+## HTML Report
 
 Using riscof framework generates a report that shows how many tests are passed and how many failed. You can find the report in riscof_work/report.html. As the report is in HTML language so you need to render it for better view if you want to see the result or you can click the [View Rendered HTML](https://htmlpreview.github.io/?https://github.com/Ammarkhan561/RISCV32I-5-Stage-Pipelined-Processor-Compliance-Verification/blob/main/riscof_work/report.html) to see the rendered report.
  
@@ -60,6 +60,7 @@ If this did not work you can download any latest version of pre-compiled toolcha
 
 
 ## Verilog Simulator
+
 An HDL Simulator is required that can simulate Verilog (or System Verilog designs). We have the following options.
 
 ### Icarus
@@ -136,6 +137,7 @@ Remember, creating a **symbolic link** in a directory in your PATH will allow yo
 
 
 ## Command Line Interface 
+
 I have used the ModelSim's command line interface for compiling and simulating SystemVerilog (`.sv`) files.
 
 1.  `vlog *.sv`: The `vlog` command is used for compiling Verilog/SystemVerilog files. The `*.sv` argument tells it to compile all `.sv` files in the current directory.
@@ -173,6 +175,7 @@ The RISC-V architecture tests are a suite of tests designed to ensure that a RIS
 To use these tests, we would clone the repository in the working directory  to generate and run the tests against our RISC-V Core.
 
 ##  Running RISCOF
+
 You can use the following RISCOF (RISC-V Instruction Set Compliance Framework) coomands to run compliance tests on a RISC-V Core
 
 `riscof setup --dutname=RV32I` 
