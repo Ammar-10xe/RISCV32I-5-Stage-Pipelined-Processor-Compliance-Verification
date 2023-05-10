@@ -3,9 +3,11 @@
 # **DataPath followed**
 
 The following datapath has been followed for the implementation of RV32I 5 Staged Pipelined Processor 
+
  ![image](https://user-images.githubusercontent.com/104595329/235644200-67e40eca-e6f1-48f5-b0ee-ef27077dd0df.png)
 
 # 5_Stage_Pipeline_RV32I_Compliance_Verification
+
 RV32I stands for RISC-V 32 bit Integer Type Processor. It is a basic processor in which other extensions i.e M(Multiplication), F(Floating Point) etc can be added.
 The following types of instructions are supported by this processor:
 - R Type (SLL, SLT, SLTU, SRL, SRA, ADD, SUB, XOR, OR, AND)
@@ -23,17 +25,18 @@ Compliance testing is **to check whether the processor under development meets t
 > **Note:** riscv-arch-test folder in this repo contains the tests that we have passed by our processor.
 
 ## Framework for Testing
+
 RISCOF framework is used which is a python based framework that enables testing of a RISC-V target (hard or soft implementations) against a standard RISC-V golden reference model using a suite of RISC-V architectural assembly tests.For more information please visit [RISCOF](https://riscof.readthedocs.io/en/latest/intro.html) 
 > In our case, we have compared our designed RTL  with golden reference model named sail
 
 ## Result
 
-Using riscof framework generates a report that shows how many tests are passed and how many failed. You can find the report in riscof_work/report.html. As the report is in HTML language so you need to render it for better view if you want to see the result or you can click the [View Rendered HTML](https://htmlpreview.github.io/?https://github.com/Ammarkhan561/RISCV32I-5-Stage-Pipelined-Processor-Compliance-Verification/blob/main/riscof_work/report.html)
- to see the rendered report.
+Using riscof framework generates a report that shows how many tests are passed and how many failed. You can find the report in riscof_work/report.html. As the report is in HTML language so you need to render it for better view if you want to see the result or you can click the [View Rendered HTML](https://htmlpreview.github.io/?https://github.com/Ammarkhan561/RISCV32I-5-Stage-Pipelined-Processor-Compliance-Verification/blob/main/riscof_work/report.html) to see the rendered report.
  
-# # Quickstart
+#  Quickstart
 
 ## RISCV-GNU Toolchain
+
 Though, we can [build](https://github.com/riscv-collab/riscv-gnu-toolchain) the toolchain from source or use the [pre-build](https://github.com/riscv-collab/riscv-gnu-toolchain/releases/tag/2022.10.11) toolchain. But don't require customize fancy features of the toolchain for application. The following command suffice. Run it to install the toolchain.
 
     sudo apt-get install gcc-riscv64-unknown-elf
@@ -68,16 +71,18 @@ Run the following commands to install Icarus Verilog and GTK wave to view the wa
     sudo apt­get install gtkwave
 
 ### Verilator
+
 Run the following command to install [Verilator](https://verilator.org/guide/latest/).
 
     sudo apt-get install verilator
 
 ### Modelsim
+
 Modelsim Setup Lite Edition will be provided on the spot. Refer the [guide](https://profile.iiita.ac.in/bibhas.ghoshal/COA_2020/Lab/ModelSim%20Linux%20installation.html) to install the Modelsim on Linux. 
 
 :warning: Remember that we need to have the ability to complile and simulate the design using command line interface (CLI). [User manual](https://www.microsemi.com/document-portal/doc_view/131619-modelsim-user) contains the instructions for that.
 
-## RISCOF 
+## RISCOF and Python
 
 [RISCOF](https://riscof.readthedocs.io/en/stable/) is the standard RISC-V Compliance testing framework. Run the following commands to install RISCOF.
 
@@ -127,14 +132,48 @@ Please give the complete PATH to create a symbolic link for example in my case i
     	 -l	 --inst-limit
     	 -x	 --enable-zfinx
 
-Remember, creating a symbolic link in a directory in your PATH will allow you to run a program/command located in another directory as if it were in your PATH. It won't add the entire directory to your PATH. If you want to add an entire directory to your PATH, you need to modify your shell's configuration file (like `~/.bashrc` or `~/.bash_profile` for the bash shell, `~/.zshrc` for zsh shell).
-
-## RISCOF Commands
-You can use the following commands to run this repo on you computer and verify it on your side as well 
-`riscof setup --dutname=dutname` 
+Remember, creating a **symbolic link** in a directory in your PATH will allow you to run a program/command located in another directory as if it were in your PATH. It won't add the entire directory to your PATH. If you want to add an entire directory to your PATH, you need to modify your shell's configuration file (like `~/.bashrc` or `~/.bash_profile` for the bash shell, `~/.zshrc` for zsh shell).
 
 
 
+It is always good to read the documentation first. So make sure to check the usage of these commands.  
+   v[sim](http://www.pldworld.com/_hdl/2/_ref/se_html/manual_html/c_vcmds191.html) and   [vlog](http://www.pldworld.com/_hdl/2/_ref/se_html/manual_html/c_vcmds188.html)
 
+The RISC-V architecture tests are a suite of tests designed to ensure that a RISC-V CPU implementation conforms to the official RISC-V specification. These tests are important for guaranteeing the correct behavior of RISC-V implementations, and they cover a range of functionality, from basic instruction behavior to more complex features such as interrupts and exceptions.
+## RISCV ARCH Tests
+
+The RISC-V architecture tests are open-source and can be found on the [RISC-V Architectural Tests GitHub repository](https://github.com/riscv/riscv-arch-test). Clone the riscv arch tests using 
+
+    git clone https://github.com/riscv-non-isa/riscv-arch-test.git
+
+The tests are divided into different categories:
+
+-   **RV32I**: Base Integer Instruction Set (32-bit)
+-   **RV64I**: Base Integer Instruction Set (64-bit)
+-   **RV32M**: Standard Extension for Integer Multiplication and Division (32-bit)
+-   **RV64M**: Standard Extension for Integer Multiplication and Division (64-bit)
+-   **RV32F**: Standard Extension for Single-Precision Floating-Point (32-bit)
+-   **RV64F**: Standard Extension for Single-Precision Floating-Point (64-bit)
+-   **RV32D**: Standard Extension for Double-Precision Floating-Point (32-bit)
+-   **RV64D**: Standard Extension for Double-Precision Floating-Point (64-bit)
+-   And many others
+
+To use these tests, we would clone the repository in the working directory  to generate and run the tests against our RISC-V Core.
+
+##  Running RISCOF
+You can use the following RISCOF (RISC-V Instruction Set Compliance Framework) coomands to run compliance tests on a RISC-V Core
+
+`riscof setup --dutname=RV32I` 
+
+This command sets up RISCOF for testing a device-under-test (DUT) named "RV32I". The DUT is the RISC-V implementation that you're testing.
+
+    riscof run --config=config.ini --suite=/home/xe-lpt-71/Documents/5stageCompliance/riscv-arch-test/riscv-test-suite/rv32i_m/I/src --env=/home/xe-lpt-71/Documents/5stageCompliance/riscv-arch-test/riscv-test-suite/env --no-ref-run
+
+
+This command runs RISCOF tests. The `--config` option specifies the configuration file, the `--suite` option specifies the path to the test suite you want to run, and the `--env` option specifies the test environment. The `–no-ref-run` option tells RISCOF not to run the tests against the reference model
+
+    riscof -v debug run --config=config.ini --suite=./riscv-arch-test/riscv-test-suite/rv32i_m/I --env=./riscv-arch-test/riscv-test-suite/env
+
+This command is similar to the previous one, but it includes the `-v debug` option, which sets the verbosity level to "debug". This means that RISCOF will provide more detailed output about what it's doing, which can be useful for debugging issues.
 
 
