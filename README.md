@@ -29,7 +29,7 @@ Compliance testing is **to check whether the processor under development meets t
 RISCOF framework is used which is a python based framework that enables testing of a RISC-V target (hard or soft implementations) against a standard RISC-V golden reference model using a suite of RISC-V architectural assembly tests.For more information please visit [RISCOF](https://riscof.readthedocs.io/en/latest/intro.html) 
 > In our case, we have compared our designed RTL  with golden reference model named sail
 
-## HTML Report
+## Result
 
 Using riscof framework generates a report that shows how many tests are passed and how many failed. You can find the report in riscof_work/report.html. As the report is in HTML language so you need to render it for better view if you want to see the result or you can click the [View Rendered HTML](https://htmlpreview.github.io/?https://github.com/Ammarkhan561/RISCV32I-5-Stage-Pipelined-Processor-Compliance-Verification/blob/main/riscof_work/report.html) to see the rendered report.
  
@@ -64,6 +64,7 @@ If this did not work you can download any latest version of pre-compiled toolcha
 An HDL Simulator is required that can simulate Verilog (or System Verilog designs). We have the following options.
 
 ### Icarus
+
 :warning: It only works for Verilog designs and may not for System.
 
 Run the following commands to install Icarus Verilog and GTK wave to view the waveform.
@@ -178,7 +179,7 @@ To use these tests, we would clone the repository in the working directory  to g
 
 You can use the following RISCOF (RISC-V Instruction Set Compliance Framework) coomands to run compliance tests on a RISC-V Core
 
-`riscof setup --dutname=RV32I` 
+    riscof setup --dutname=RV32I 
 
 This command sets up RISCOF for testing a device-under-test (DUT) named "RV32I". The DUT is the RISC-V implementation that you're testing.
 
