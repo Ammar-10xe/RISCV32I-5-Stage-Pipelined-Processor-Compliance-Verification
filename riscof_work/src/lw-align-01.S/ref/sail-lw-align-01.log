@@ -1,4 +1,4 @@
-using /home/moon/moon_verif_5s/riscof_work/src/lw-align-01.S/ref/Reference-sail_c_simulator.signature for test-signature output.
+using /home/xe-lpt-71/Documents/Test/riscof_work/src/lw-align-01.S/ref/Reference-sail_c_simulator.signature for test-signature output.
 [Sail] Allocating new block 0x80000000
 tohost located at 0x80001000
 [Sail] Allocating new block 0x0

@@ -75865,29 +75865,29 @@ Disassembly of section .tohost:
 Disassembly of section .data:
 
 000ca000 <rvtest_data_begin>:
-   ca000:	cafe                	sw	t6,84(sp)
-   ca002:	babe                	fsd	fa5,368(sp)
-   ca004:	cafe                	sw	t6,84(sp)
-   ca006:	babe                	fsd	fa5,368(sp)
-   ca008:	cafe                	sw	t6,84(sp)
-   ca00a:	babe                	fsd	fa5,368(sp)
-   ca00c:	cafe                	sw	t6,84(sp)
-   ca00e:	babe                	fsd	fa5,368(sp)
+   ca000:	cafe                	.2byte	0xcafe
+   ca002:	babe                	.2byte	0xbabe
+   ca004:	cafe                	.2byte	0xcafe
+   ca006:	babe                	.2byte	0xbabe
+   ca008:	cafe                	.2byte	0xcafe
+   ca00a:	babe                	.2byte	0xbabe
+   ca00c:	cafe                	.2byte	0xcafe
+   ca00e:	babe                	.2byte	0xbabe
 
 000ca010 <rvtest_data_end>:
 	...
 
 000ca100 <begin_regstate>:
-   ca100:	0080                	addi	s0,sp,64
+   ca100:	0080                	.2byte	0x80
 	...
 
 000ca200 <end_regstate>:
-   ca200:	0004                	0x4
+   ca200:	0004                	.2byte	0x4
 	...
 
 000ca210 <begin_signature>:
-   ca210:	a309                	j	ca712 <signature_x2_0+0x4ae>
-   ca212:	6f5c                	flw	fa5,28(a4)
+   ca210:	a309                	.2byte	0xa309
+   ca212:	6f5c                	.2byte	0x6f5c
 
 000ca214 <signature_x9_0>:
    ca214:	deadbeef          	jal	t4,a57fe <inst_336+0x4ca>
@@ -76622,1677 +76622,1691 @@ Disassembly of section .data:
    cad68:	deadbeef          	jal	t4,a6352 <inst_344+0x34a>
 
 000cad6c <sig_end_canary>:
-   cad6c:	a309                	j	cb26e <_end+0x4fe>
-   cad6e:	6f5c                	flw	fa5,28(a4)
+   cad6c:	a309                	.2byte	0xa309
+   cad6e:	6f5c                	.2byte	0x6f5c
 
 Disassembly of section .riscv.attributes:
 
 00000000 <.riscv.attributes>:
-   0:	1941                	addi	s2,s2,-16
-   2:	0000                	unimp
-   4:	7200                	flw	fs0,32(a2)
-   6:	7369                	lui	t1,0xffffa
+   0:	1941                	.2byte	0x1941
+   2:	0000                	.2byte	0x0
+   4:	7200                	.2byte	0x7200
+   6:	7369                	.2byte	0x7369
    8:	01007663          	bgeu	zero,a6,14 <num+0x14>
    c:	0000000f          	fence	unknown,unknown
-  10:	7205                	lui	tp,0xfffe1
-  12:	3376                	fld	ft6,376(sp)
-  14:	6932                	flw	fs2,12(sp)
-  16:	7032                	flw	ft0,44(sp)
-  18:	0030                	addi	a2,sp,8
+  10:	7205                	.2byte	0x7205
+  12:	3376                	.2byte	0x3376
+  14:	6932                	.2byte	0x6932
+  16:	7032                	.2byte	0x7032
+  18:	0030                	.2byte	0x30
 
 Disassembly of section .debug_line:
 
 00000000 <.debug_line>:
-       0:	1162                	slli	sp,sp,0x38
-       2:	0000                	unimp
-       4:	0005                	c.nop	1
-       6:	0004                	0x4
-       8:	002e                	c.slli	zero,0xb
-       a:	0000                	unimp
-       c:	0101                	addi	sp,sp,0
-       e:	fb01                	bnez	a4,ffffff1e <_end+0xfff351ae>
-      10:	0d0e                	slli	s10,s10,0x3
-      12:	0100                	addi	s0,sp,128
-      14:	0101                	addi	sp,sp,0
-      16:	0001                	nop
-      18:	0000                	unimp
-      1a:	0001                	nop
-      1c:	0100                	addi	s0,sp,128
-      1e:	0101                	addi	sp,sp,0
-      20:	021f 0000 0000      	0x21f
-      26:	00000037          	lui	zero,0x0
-      2a:	0102                	c.slli64	sp
-      2c:	021f 020f 007f      	0x7f020f021f
-      32:	0000                	unimp
-      34:	7f01                	lui	t5,0xfffe0
-      36:	0000                	unimp
-      38:	0100                	addi	s0,sp,128
-      3a:	0500                	addi	s0,sp,640
-      3c:	0002                	c.slli64	zero
-      3e:	0800                	addi	s0,sp,16
-      40:	0300                	addi	s0,sp,384
-      42:	0119                	addi	sp,sp,6
+       0:	1162                	.2byte	0x1162
+       2:	0000                	.2byte	0x0
+       4:	0005                	.2byte	0x5
+       6:	0004                	.2byte	0x4
+       8:	002e                	.2byte	0x2e
+       a:	0000                	.2byte	0x0
+       c:	0101                	.2byte	0x101
+       e:	fb01                	.2byte	0xfb01
+      10:	0d0e                	.2byte	0xd0e
+      12:	0100                	.2byte	0x100
+      14:	0101                	.2byte	0x101
+      16:	0001                	.2byte	0x1
+      18:	0000                	.2byte	0x0
+      1a:	0001                	.2byte	0x1
+      1c:	0100                	.2byte	0x100
+      1e:	0101                	.2byte	0x101
+      20:	021f 0000 0000      	.byte	0x1f, 0x02, 0x00, 0x00, 0x00, 0x00
+      26:	003d                	.2byte	0x3d
+      28:	0000                	.2byte	0x0
+      2a:	0102                	.2byte	0x102
+      2c:	021f 020f 008b      	.byte	0x1f, 0x02, 0x0f, 0x02, 0x8b, 0x00
+      32:	0000                	.2byte	0x0
+      34:	8b01                	.2byte	0x8b01
+      36:	0000                	.2byte	0x0
+      38:	0100                	.2byte	0x100
+      3a:	0500                	.2byte	0x500
+      3c:	0002                	.2byte	0x2
+      3e:	0800                	.2byte	0x800
+      40:	0300                	.2byte	0x300
+      42:	0119                	.2byte	0x119
       44:	f8090603          	lb	a2,-128(s2)
-      48:	0100                	addi	s0,sp,128
+      48:	0100                	.2byte	0x100
       4a:	08090503          	lb	a0,128(s2)
-      4e:	0100                	addi	s0,sp,128
+      4e:	0100                	.2byte	0x100
       50:	30090503          	lb	a0,768(s2)
-      54:	0100                	addi	s0,sp,128
+      54:	0100                	.2byte	0x100
       56:	24090503          	lb	a0,576(s2)
-      5a:	0102                	c.slli64	sp
+      5a:	0102                	.2byte	0x102
       5c:	38090503          	lb	a0,896(s2)
-      60:	0100                	addi	s0,sp,128
+      60:	0100                	.2byte	0x100
       62:	38090503          	lb	a0,896(s2)
-      66:	0100                	addi	s0,sp,128
+      66:	0100                	.2byte	0x100
       68:	38090503          	lb	a0,896(s2)
-      6c:	0100                	addi	s0,sp,128
+      6c:	0100                	.2byte	0x100
       6e:	28090503          	lb	a0,640(s2)
-      72:	0104                	addi	s1,sp,128
+      72:	0104                	.2byte	0x104
       74:	68090503          	lb	a0,1664(s2)
-      78:	0100                	addi	s0,sp,128
+      78:	0100                	.2byte	0x100
       7a:	68090503          	lb	a0,1664(s2)
-      7e:	0100                	addi	s0,sp,128
+      7e:	0100                	.2byte	0x100
       80:	28090503          	lb	a0,640(s2)
-      84:	0108                	addi	a0,sp,128
+      84:	0108                	.2byte	0x108
       86:	34090503          	lb	a0,832(s2)
-      8a:	0100                	addi	s0,sp,128
+      8a:	0100                	.2byte	0x100
       8c:	38090503          	lb	a0,896(s2)
-      90:	0100                	addi	s0,sp,128
+      90:	0100                	.2byte	0x100
       92:	3c090503          	lb	a0,960(s2)
-      96:	0100                	addi	s0,sp,128
+      96:	0100                	.2byte	0x100
       98:	24090503          	lb	a0,576(s2)
-      9c:	0102                	c.slli64	sp
+      9c:	0102                	.2byte	0x102
       9e:	24090503          	lb	a0,576(s2)
-      a2:	0102                	c.slli64	sp
+      a2:	0102                	.2byte	0x102
       a4:	34090503          	lb	a0,832(s2)
-      a8:	0100                	addi	s0,sp,128
+      a8:	0100                	.2byte	0x100
       aa:	64090503          	lb	a0,1600(s2)
-      ae:	0100                	addi	s0,sp,128
+      ae:	0100                	.2byte	0x100
       b0:	68090503          	lb	a0,1664(s2)
-      b4:	0100                	addi	s0,sp,128
+      b4:	0100                	.2byte	0x100
       b6:	30090503          	lb	a0,768(s2)
-      ba:	0100                	addi	s0,sp,128
+      ba:	0100                	.2byte	0x100
       bc:	34090503          	lb	a0,832(s2)
-      c0:	0100                	addi	s0,sp,128
+      c0:	0100                	.2byte	0x100
       c2:	38090103          	lb	sp,896(s2)
-      c6:	0100                	addi	s0,sp,128
+      c6:	0100                	.2byte	0x100
       c8:	08090503          	lb	a0,128(s2)
-      cc:	0100                	addi	s0,sp,128
+      cc:	0100                	.2byte	0x100
       ce:	30090503          	lb	a0,768(s2)
-      d2:	0100                	addi	s0,sp,128
+      d2:	0100                	.2byte	0x100
       d4:	34090503          	lb	a0,832(s2)
-      d8:	0100                	addi	s0,sp,128
+      d8:	0100                	.2byte	0x100
       da:	38090503          	lb	a0,896(s2)
-      de:	0100                	addi	s0,sp,128
+      de:	0100                	.2byte	0x100
       e0:	28090503          	lb	a0,640(s2)
-      e4:	0102                	c.slli64	sp
+      e4:	0102                	.2byte	0x102
       e6:	28090503          	lb	a0,640(s2)
-      ea:	0108                	addi	a0,sp,128
+      ea:	0108                	.2byte	0x108
       ec:	48090503          	lb	a0,1152(s2)
-      f0:	0100                	addi	s0,sp,128
+      f0:	0100                	.2byte	0x100
       f2:	64090503          	lb	a0,1600(s2)
-      f6:	0100                	addi	s0,sp,128
+      f6:	0100                	.2byte	0x100
       f8:	2c090503          	lb	a0,704(s2)
-      fc:	0108                	addi	a0,sp,128
+      fc:	0108                	.2byte	0x108
       fe:	24090503          	lb	a0,576(s2)
-     102:	0102                	c.slli64	sp
+     102:	0102                	.2byte	0x102
      104:	30090503          	lb	a0,768(s2)
-     108:	0100                	addi	s0,sp,128
+     108:	0100                	.2byte	0x100
      10a:	28090503          	lb	a0,640(s2)
-     10e:	0108                	addi	a0,sp,128
+     10e:	0108                	.2byte	0x108
      110:	30090503          	lb	a0,768(s2)
-     114:	0100                	addi	s0,sp,128
+     114:	0100                	.2byte	0x100
      116:	34090503          	lb	a0,832(s2)
-     11a:	0100                	addi	s0,sp,128
+     11a:	0100                	.2byte	0x100
      11c:	68090503          	lb	a0,1664(s2)
-     120:	0100                	addi	s0,sp,128
+     120:	0100                	.2byte	0x100
      122:	34090503          	lb	a0,832(s2)
-     126:	0100                	addi	s0,sp,128
+     126:	0100                	.2byte	0x100
      128:	34090503          	lb	a0,832(s2)
-     12c:	0100                	addi	s0,sp,128
+     12c:	0100                	.2byte	0x100
      12e:	28090503          	lb	a0,640(s2)
-     132:	0102                	c.slli64	sp
+     132:	0102                	.2byte	0x102
      134:	30090503          	lb	a0,768(s2)
-     138:	0100                	addi	s0,sp,128
+     138:	0100                	.2byte	0x100
      13a:	34090503          	lb	a0,832(s2)
-     13e:	0100                	addi	s0,sp,128
+     13e:	0100                	.2byte	0x100
      140:	30090503          	lb	a0,768(s2)
-     144:	0100                	addi	s0,sp,128
+     144:	0100                	.2byte	0x100
      146:	30090503          	lb	a0,768(s2)
-     14a:	0100                	addi	s0,sp,128
+     14a:	0100                	.2byte	0x100
      14c:	68090503          	lb	a0,1664(s2)
-     150:	0100                	addi	s0,sp,128
+     150:	0100                	.2byte	0x100
      152:	30090503          	lb	a0,768(s2)
-     156:	0100                	addi	s0,sp,128
+     156:	0100                	.2byte	0x100
      158:	24090503          	lb	a0,576(s2)
-     15c:	0101                	addi	sp,sp,0
+     15c:	0101                	.2byte	0x101
      15e:	34090503          	lb	a0,832(s2)
-     162:	0100                	addi	s0,sp,128
+     162:	0100                	.2byte	0x100
      164:	30090503          	lb	a0,768(s2)
-     168:	0100                	addi	s0,sp,128
+     168:	0100                	.2byte	0x100
      16a:	34090503          	lb	a0,832(s2)
-     16e:	0100                	addi	s0,sp,128
+     16e:	0100                	.2byte	0x100
      170:	38090503          	lb	a0,896(s2)
-     174:	0100                	addi	s0,sp,128
+     174:	0100                	.2byte	0x100
      176:	28090503          	lb	a0,640(s2)
-     17a:	0102                	c.slli64	sp
+     17a:	0102                	.2byte	0x102
      17c:	38090503          	lb	a0,896(s2)
-     180:	0100                	addi	s0,sp,128
+     180:	0100                	.2byte	0x100
      182:	48090503          	lb	a0,1152(s2)
-     186:	0100                	addi	s0,sp,128
+     186:	0100                	.2byte	0x100
      188:	28090503          	lb	a0,640(s2)
-     18c:	0104                	addi	s1,sp,128
+     18c:	0104                	.2byte	0x104
      18e:	dc090503          	lb	a0,-576(s2)
-     192:	010a                	slli	sp,sp,0x2
+     192:	010a                	.2byte	0x10a
      194:	d8090503          	lb	a0,-640(s2)
-     198:	010a                	slli	sp,sp,0x2
+     198:	010a                	.2byte	0x10a
      19a:	dc090503          	lb	a0,-576(s2)
-     19e:	010a                	slli	sp,sp,0x2
+     19e:	010a                	.2byte	0x10a
      1a0:	a8090503          	lb	a0,-1408(s2)
-     1a4:	0100                	addi	s0,sp,128
+     1a4:	0100                	.2byte	0x100
      1a6:	44090503          	lb	a0,1088(s2)
-     1aa:	0100                	addi	s0,sp,128
+     1aa:	0100                	.2byte	0x100
      1ac:	34090503          	lb	a0,832(s2)
-     1b0:	0100                	addi	s0,sp,128
+     1b0:	0100                	.2byte	0x100
      1b2:	40090503          	lb	a0,1024(s2)
-     1b6:	0100                	addi	s0,sp,128
+     1b6:	0100                	.2byte	0x100
      1b8:	38090503          	lb	a0,896(s2)
-     1bc:	0100                	addi	s0,sp,128
+     1bc:	0100                	.2byte	0x100
      1be:	2c090503          	lb	a0,704(s2)
-     1c2:	0102                	c.slli64	sp
+     1c2:	0102                	.2byte	0x102
      1c4:	2c090503          	lb	a0,704(s2)
-     1c8:	0101                	addi	sp,sp,0
+     1c8:	0101                	.2byte	0x101
      1ca:	34090503          	lb	a0,832(s2)
-     1ce:	0100                	addi	s0,sp,128
+     1ce:	0100                	.2byte	0x100
      1d0:	34090503          	lb	a0,832(s2)
-     1d4:	0100                	addi	s0,sp,128
+     1d4:	0100                	.2byte	0x100
      1d6:	68090503          	lb	a0,1664(s2)
-     1da:	0100                	addi	s0,sp,128
+     1da:	0100                	.2byte	0x100
      1dc:	34090503          	lb	a0,832(s2)
-     1e0:	0100                	addi	s0,sp,128
+     1e0:	0100                	.2byte	0x100
      1e2:	34090503          	lb	a0,832(s2)
-     1e6:	0100                	addi	s0,sp,128
+     1e6:	0100                	.2byte	0x100
      1e8:	34090503          	lb	a0,832(s2)
-     1ec:	0100                	addi	s0,sp,128
+     1ec:	0100                	.2byte	0x100
      1ee:	64090503          	lb	a0,1600(s2)
-     1f2:	0100                	addi	s0,sp,128
+     1f2:	0100                	.2byte	0x100
      1f4:	d4090503          	lb	a0,-704(s2)
-     1f8:	010a                	slli	sp,sp,0x2
+     1f8:	010a                	.2byte	0x10a
      1fa:	34090503          	lb	a0,832(s2)
-     1fe:	0100                	addi	s0,sp,128
+     1fe:	0100                	.2byte	0x100
      200:	24090503          	lb	a0,576(s2)
-     204:	0104                	addi	s1,sp,128
+     204:	0104                	.2byte	0x104
      206:	24090503          	lb	a0,576(s2)
-     20a:	0101                	addi	sp,sp,0
+     20a:	0101                	.2byte	0x101
      20c:	34090503          	lb	a0,832(s2)
-     210:	0100                	addi	s0,sp,128
+     210:	0100                	.2byte	0x100
      212:	2c090503          	lb	a0,704(s2)
-     216:	0104                	addi	s1,sp,128
+     216:	0104                	.2byte	0x104
      218:	30090503          	lb	a0,768(s2)
-     21c:	0100                	addi	s0,sp,128
+     21c:	0100                	.2byte	0x100
      21e:	d4090503          	lb	a0,-704(s2)
-     222:	010a                	slli	sp,sp,0x2
+     222:	010a                	.2byte	0x10a
      224:	38090503          	lb	a0,896(s2)
-     228:	0100                	addi	s0,sp,128
+     228:	0100                	.2byte	0x100
      22a:	34090503          	lb	a0,832(s2)
-     22e:	0100                	addi	s0,sp,128
+     22e:	0100                	.2byte	0x100
      230:	30090503          	lb	a0,768(s2)
-     234:	0100                	addi	s0,sp,128
+     234:	0100                	.2byte	0x100
      236:	34090503          	lb	a0,832(s2)
-     23a:	0100                	addi	s0,sp,128
+     23a:	0100                	.2byte	0x100
      23c:	34090503          	lb	a0,832(s2)
-     240:	0100                	addi	s0,sp,128
+     240:	0100                	.2byte	0x100
      242:	24090503          	lb	a0,576(s2)
-     246:	0101                	addi	sp,sp,0
+     246:	0101                	.2byte	0x101
      248:	34090503          	lb	a0,832(s2)
-     24c:	0100                	addi	s0,sp,128
+     24c:	0100                	.2byte	0x100
      24e:	d4090503          	lb	a0,-704(s2)
-     252:	010a                	slli	sp,sp,0x2
+     252:	010a                	.2byte	0x10a
      254:	3c090503          	lb	a0,960(s2)
-     258:	0100                	addi	s0,sp,128
+     258:	0100                	.2byte	0x100
      25a:	24090503          	lb	a0,576(s2)
-     25e:	0101                	addi	sp,sp,0
+     25e:	0101                	.2byte	0x101
      260:	64090503          	lb	a0,1600(s2)
-     264:	0100                	addi	s0,sp,128
+     264:	0100                	.2byte	0x100
      266:	64090503          	lb	a0,1600(s2)
-     26a:	0100                	addi	s0,sp,128
+     26a:	0100                	.2byte	0x100
      26c:	38090503          	lb	a0,896(s2)
-     270:	0100                	addi	s0,sp,128
+     270:	0100                	.2byte	0x100
      272:	24090503          	lb	a0,576(s2)
-     276:	0102                	c.slli64	sp
+     276:	0102                	.2byte	0x102
      278:	34090503          	lb	a0,832(s2)
-     27c:	0100                	addi	s0,sp,128
+     27c:	0100                	.2byte	0x100
      27e:	3c090503          	lb	a0,960(s2)
-     282:	0100                	addi	s0,sp,128
+     282:	0100                	.2byte	0x100
      284:	2c090503          	lb	a0,704(s2)
-     288:	0101                	addi	sp,sp,0
+     288:	0101                	.2byte	0x101
      28a:	dc090503          	lb	a0,-576(s2)
-     28e:	010a                	slli	sp,sp,0x2
+     28e:	010a                	.2byte	0x10a
      290:	34090503          	lb	a0,832(s2)
-     294:	0100                	addi	s0,sp,128
+     294:	0100                	.2byte	0x100
      296:	38090503          	lb	a0,896(s2)
-     29a:	0100                	addi	s0,sp,128
+     29a:	0100                	.2byte	0x100
      29c:	28090503          	lb	a0,640(s2)
-     2a0:	0102                	c.slli64	sp
+     2a0:	0102                	.2byte	0x102
      2a2:	40090503          	lb	a0,1024(s2)
-     2a6:	0100                	addi	s0,sp,128
+     2a6:	0100                	.2byte	0x100
      2a8:	34090503          	lb	a0,832(s2)
-     2ac:	0100                	addi	s0,sp,128
+     2ac:	0100                	.2byte	0x100
      2ae:	38090503          	lb	a0,896(s2)
-     2b2:	0100                	addi	s0,sp,128
+     2b2:	0100                	.2byte	0x100
      2b4:	38090503          	lb	a0,896(s2)
-     2b8:	0100                	addi	s0,sp,128
+     2b8:	0100                	.2byte	0x100
      2ba:	40090503          	lb	a0,1024(s2)
-     2be:	0100                	addi	s0,sp,128
+     2be:	0100                	.2byte	0x100
      2c0:	28090503          	lb	a0,640(s2)
-     2c4:	0101                	addi	sp,sp,0
+     2c4:	0101                	.2byte	0x101
      2c6:	30090503          	lb	a0,768(s2)
-     2ca:	0100                	addi	s0,sp,128
+     2ca:	0100                	.2byte	0x100
      2cc:	40090503          	lb	a0,1024(s2)
-     2d0:	0100                	addi	s0,sp,128
+     2d0:	0100                	.2byte	0x100
      2d2:	d8090503          	lb	a0,-640(s2)
-     2d6:	010a                	slli	sp,sp,0x2
+     2d6:	010a                	.2byte	0x10a
      2d8:	30090503          	lb	a0,768(s2)
-     2dc:	0100                	addi	s0,sp,128
+     2dc:	0100                	.2byte	0x100
      2de:	34090503          	lb	a0,832(s2)
-     2e2:	0100                	addi	s0,sp,128
+     2e2:	0100                	.2byte	0x100
      2e4:	34090503          	lb	a0,832(s2)
-     2e8:	0100                	addi	s0,sp,128
+     2e8:	0100                	.2byte	0x100
      2ea:	28090503          	lb	a0,640(s2)
-     2ee:	0102                	c.slli64	sp
+     2ee:	0102                	.2byte	0x102
      2f0:	30090503          	lb	a0,768(s2)
-     2f4:	0100                	addi	s0,sp,128
+     2f4:	0100                	.2byte	0x100
      2f6:	34090503          	lb	a0,832(s2)
-     2fa:	0100                	addi	s0,sp,128
+     2fa:	0100                	.2byte	0x100
      2fc:	64090503          	lb	a0,1600(s2)
-     300:	0100                	addi	s0,sp,128
+     300:	0100                	.2byte	0x100
      302:	28090503          	lb	a0,640(s2)
-     306:	0101                	addi	sp,sp,0
+     306:	0101                	.2byte	0x101
      308:	38090503          	lb	a0,896(s2)
-     30c:	0100                	addi	s0,sp,128
+     30c:	0100                	.2byte	0x100
      30e:	34090503          	lb	a0,832(s2)
-     312:	0100                	addi	s0,sp,128
+     312:	0100                	.2byte	0x100
      314:	34090503          	lb	a0,832(s2)
-     318:	0100                	addi	s0,sp,128
+     318:	0100                	.2byte	0x100
      31a:	28090503          	lb	a0,640(s2)
-     31e:	0101                	addi	sp,sp,0
+     31e:	0101                	.2byte	0x101
      320:	40090503          	lb	a0,1024(s2)
-     324:	0100                	addi	s0,sp,128
+     324:	0100                	.2byte	0x100
      326:	34090503          	lb	a0,832(s2)
-     32a:	0100                	addi	s0,sp,128
+     32a:	0100                	.2byte	0x100
      32c:	38090503          	lb	a0,896(s2)
-     330:	0100                	addi	s0,sp,128
+     330:	0100                	.2byte	0x100
      332:	34090503          	lb	a0,832(s2)
-     336:	0100                	addi	s0,sp,128
+     336:	0100                	.2byte	0x100
      338:	28090503          	lb	a0,640(s2)
-     33c:	0108                	addi	a0,sp,128
+     33c:	0108                	.2byte	0x108
      33e:	40090503          	lb	a0,1024(s2)
-     342:	0100                	addi	s0,sp,128
+     342:	0100                	.2byte	0x100
      344:	68090503          	lb	a0,1664(s2)
-     348:	0100                	addi	s0,sp,128
+     348:	0100                	.2byte	0x100
      34a:	28090503          	lb	a0,640(s2)
-     34e:	0104                	addi	s1,sp,128
+     34e:	0104                	.2byte	0x104
      350:	34090503          	lb	a0,832(s2)
-     354:	0100                	addi	s0,sp,128
+     354:	0100                	.2byte	0x100
      356:	38090503          	lb	a0,896(s2)
-     35a:	0100                	addi	s0,sp,128
+     35a:	0100                	.2byte	0x100
      35c:	38090503          	lb	a0,896(s2)
-     360:	0100                	addi	s0,sp,128
+     360:	0100                	.2byte	0x100
      362:	38090503          	lb	a0,896(s2)
-     366:	0100                	addi	s0,sp,128
+     366:	0100                	.2byte	0x100
      368:	30090503          	lb	a0,768(s2)
-     36c:	0108                	addi	a0,sp,128
+     36c:	0108                	.2byte	0x108
      36e:	3c090503          	lb	a0,960(s2)
-     372:	0100                	addi	s0,sp,128
+     372:	0100                	.2byte	0x100
      374:	38090503          	lb	a0,896(s2)
-     378:	0100                	addi	s0,sp,128
+     378:	0100                	.2byte	0x100
      37a:	4c090503          	lb	a0,1216(s2)
-     37e:	0100                	addi	s0,sp,128
+     37e:	0100                	.2byte	0x100
      380:	38090503          	lb	a0,896(s2)
-     384:	0100                	addi	s0,sp,128
+     384:	0100                	.2byte	0x100
      386:	34090503          	lb	a0,832(s2)
-     38a:	0100                	addi	s0,sp,128
+     38a:	0100                	.2byte	0x100
      38c:	6c090503          	lb	a0,1728(s2)
-     390:	0100                	addi	s0,sp,128
+     390:	0100                	.2byte	0x100
      392:	34090503          	lb	a0,832(s2)
-     396:	0100                	addi	s0,sp,128
+     396:	0100                	.2byte	0x100
      398:	38090503          	lb	a0,896(s2)
-     39c:	0100                	addi	s0,sp,128
+     39c:	0100                	.2byte	0x100
      39e:	38090503          	lb	a0,896(s2)
-     3a2:	0100                	addi	s0,sp,128
+     3a2:	0100                	.2byte	0x100
      3a4:	48090503          	lb	a0,1152(s2)
-     3a8:	0100                	addi	s0,sp,128
+     3a8:	0100                	.2byte	0x100
      3aa:	3c090503          	lb	a0,960(s2)
-     3ae:	0100                	addi	s0,sp,128
+     3ae:	0100                	.2byte	0x100
      3b0:	3c090503          	lb	a0,960(s2)
-     3b4:	0100                	addi	s0,sp,128
+     3b4:	0100                	.2byte	0x100
      3b6:	38090503          	lb	a0,896(s2)
-     3ba:	0100                	addi	s0,sp,128
+     3ba:	0100                	.2byte	0x100
      3bc:	38090503          	lb	a0,896(s2)
-     3c0:	0100                	addi	s0,sp,128
+     3c0:	0100                	.2byte	0x100
      3c2:	38090503          	lb	a0,896(s2)
-     3c6:	0100                	addi	s0,sp,128
+     3c6:	0100                	.2byte	0x100
      3c8:	30090503          	lb	a0,768(s2)
-     3cc:	0108                	addi	a0,sp,128
+     3cc:	0108                	.2byte	0x108
      3ce:	28090503          	lb	a0,640(s2)
-     3d2:	0104                	addi	s1,sp,128
+     3d2:	0104                	.2byte	0x104
      3d4:	6c090503          	lb	a0,1728(s2)
-     3d8:	0100                	addi	s0,sp,128
+     3d8:	0100                	.2byte	0x100
      3da:	4c090503          	lb	a0,1216(s2)
-     3de:	0100                	addi	s0,sp,128
+     3de:	0100                	.2byte	0x100
      3e0:	dc090503          	lb	a0,-576(s2)
-     3e4:	010a                	slli	sp,sp,0x2
+     3e4:	010a                	.2byte	0x10a
      3e6:	28090503          	lb	a0,640(s2)
-     3ea:	0102                	c.slli64	sp
+     3ea:	0102                	.2byte	0x102
      3ec:	38090503          	lb	a0,896(s2)
-     3f0:	0100                	addi	s0,sp,128
+     3f0:	0100                	.2byte	0x100
      3f2:	3c090503          	lb	a0,960(s2)
-     3f6:	0100                	addi	s0,sp,128
+     3f6:	0100                	.2byte	0x100
      3f8:	38090503          	lb	a0,896(s2)
-     3fc:	0100                	addi	s0,sp,128
+     3fc:	0100                	.2byte	0x100
      3fe:	38090503          	lb	a0,896(s2)
-     402:	0100                	addi	s0,sp,128
+     402:	0100                	.2byte	0x100
      404:	d8090503          	lb	a0,-640(s2)
-     408:	010a                	slli	sp,sp,0x2
+     408:	010a                	.2byte	0x10a
      40a:	2c090503          	lb	a0,704(s2)
-     40e:	0102                	c.slli64	sp
+     40e:	0102                	.2byte	0x102
      410:	2c090503          	lb	a0,704(s2)
-     414:	0104                	addi	s1,sp,128
+     414:	0104                	.2byte	0x104
      416:	2c090503          	lb	a0,704(s2)
-     41a:	0102                	c.slli64	sp
+     41a:	0102                	.2byte	0x102
      41c:	28090503          	lb	a0,640(s2)
-     420:	0101                	addi	sp,sp,0
+     420:	0101                	.2byte	0x101
      422:	3c090503          	lb	a0,960(s2)
-     426:	0100                	addi	s0,sp,128
+     426:	0100                	.2byte	0x100
      428:	38090503          	lb	a0,896(s2)
-     42c:	0100                	addi	s0,sp,128
+     42c:	0100                	.2byte	0x100
      42e:	30090503          	lb	a0,768(s2)
-     432:	0108                	addi	a0,sp,128
+     432:	0108                	.2byte	0x108
      434:	34090503          	lb	a0,832(s2)
-     438:	0100                	addi	s0,sp,128
+     438:	0100                	.2byte	0x100
      43a:	dc090503          	lb	a0,-576(s2)
-     43e:	010a                	slli	sp,sp,0x2
+     43e:	010a                	.2byte	0x10a
      440:	4c090503          	lb	a0,1216(s2)
-     444:	0100                	addi	s0,sp,128
+     444:	0100                	.2byte	0x100
      446:	dc090503          	lb	a0,-576(s2)
-     44a:	010a                	slli	sp,sp,0x2
+     44a:	010a                	.2byte	0x10a
      44c:	6c090503          	lb	a0,1728(s2)
-     450:	0100                	addi	s0,sp,128
+     450:	0100                	.2byte	0x100
      452:	dc090503          	lb	a0,-576(s2)
-     456:	010a                	slli	sp,sp,0x2
+     456:	010a                	.2byte	0x10a
      458:	2c090503          	lb	a0,704(s2)
-     45c:	0102                	c.slli64	sp
+     45c:	0102                	.2byte	0x102
      45e:	a8090503          	lb	a0,-1408(s2)
-     462:	0100                	addi	s0,sp,128
+     462:	0100                	.2byte	0x100
      464:	44090503          	lb	a0,1088(s2)
-     468:	0100                	addi	s0,sp,128
+     468:	0100                	.2byte	0x100
      46a:	38090503          	lb	a0,896(s2)
-     46e:	0100                	addi	s0,sp,128
+     46e:	0100                	.2byte	0x100
      470:	2c090503          	lb	a0,704(s2)
-     474:	0102                	c.slli64	sp
+     474:	0102                	.2byte	0x102
      476:	34090503          	lb	a0,832(s2)
-     47a:	0100                	addi	s0,sp,128
+     47a:	0100                	.2byte	0x100
      47c:	48090503          	lb	a0,1152(s2)
-     480:	0100                	addi	s0,sp,128
+     480:	0100                	.2byte	0x100
      482:	30090503          	lb	a0,768(s2)
-     486:	0100                	addi	s0,sp,128
+     486:	0100                	.2byte	0x100
      488:	28090503          	lb	a0,640(s2)
-     48c:	0101                	addi	sp,sp,0
+     48c:	0101                	.2byte	0x101
      48e:	34090503          	lb	a0,832(s2)
-     492:	0100                	addi	s0,sp,128
+     492:	0100                	.2byte	0x100
      494:	30090503          	lb	a0,768(s2)
-     498:	0100                	addi	s0,sp,128
+     498:	0100                	.2byte	0x100
      49a:	28090503          	lb	a0,640(s2)
-     49e:	0101                	addi	sp,sp,0
+     49e:	0101                	.2byte	0x101
      4a0:	3c090503          	lb	a0,960(s2)
-     4a4:	0100                	addi	s0,sp,128
+     4a4:	0100                	.2byte	0x100
      4a6:	38090503          	lb	a0,896(s2)
-     4aa:	0100                	addi	s0,sp,128
+     4aa:	0100                	.2byte	0x100
      4ac:	30090503          	lb	a0,768(s2)
-     4b0:	0100                	addi	s0,sp,128
+     4b0:	0100                	.2byte	0x100
      4b2:	d8090503          	lb	a0,-640(s2)
-     4b6:	010a                	slli	sp,sp,0x2
+     4b6:	010a                	.2byte	0x10a
      4b8:	a4090503          	lb	a0,-1472(s2)
-     4bc:	0100                	addi	s0,sp,128
+     4bc:	0100                	.2byte	0x100
      4be:	d8090503          	lb	a0,-640(s2)
-     4c2:	010a                	slli	sp,sp,0x2
+     4c2:	010a                	.2byte	0x10a
      4c4:	38090503          	lb	a0,896(s2)
-     4c8:	0100                	addi	s0,sp,128
+     4c8:	0100                	.2byte	0x100
      4ca:	30090503          	lb	a0,768(s2)
-     4ce:	0100                	addi	s0,sp,128
+     4ce:	0100                	.2byte	0x100
      4d0:	34090503          	lb	a0,832(s2)
-     4d4:	0100                	addi	s0,sp,128
+     4d4:	0100                	.2byte	0x100
      4d6:	28090503          	lb	a0,640(s2)
-     4da:	0104                	addi	s1,sp,128
+     4da:	0104                	.2byte	0x104
      4dc:	a8090503          	lb	a0,-1408(s2)
-     4e0:	0100                	addi	s0,sp,128
+     4e0:	0100                	.2byte	0x100
      4e2:	34090503          	lb	a0,832(s2)
-     4e6:	0100                	addi	s0,sp,128
+     4e6:	0100                	.2byte	0x100
      4e8:	28090503          	lb	a0,640(s2)
-     4ec:	0104                	addi	s1,sp,128
+     4ec:	0104                	.2byte	0x104
      4ee:	34090503          	lb	a0,832(s2)
-     4f2:	0100                	addi	s0,sp,128
+     4f2:	0100                	.2byte	0x100
      4f4:	30090503          	lb	a0,768(s2)
-     4f8:	0100                	addi	s0,sp,128
+     4f8:	0100                	.2byte	0x100
      4fa:	34090503          	lb	a0,832(s2)
-     4fe:	0100                	addi	s0,sp,128
+     4fe:	0100                	.2byte	0x100
      500:	68090503          	lb	a0,1664(s2)
-     504:	0100                	addi	s0,sp,128
+     504:	0100                	.2byte	0x100
      506:	48090503          	lb	a0,1152(s2)
-     50a:	0100                	addi	s0,sp,128
+     50a:	0100                	.2byte	0x100
      50c:	24090503          	lb	a0,576(s2)
-     510:	0101                	addi	sp,sp,0
+     510:	0101                	.2byte	0x101
      512:	a4090503          	lb	a0,-1472(s2)
-     516:	0100                	addi	s0,sp,128
+     516:	0100                	.2byte	0x100
      518:	2c090503          	lb	a0,704(s2)
-     51c:	0108                	addi	a0,sp,128
+     51c:	0108                	.2byte	0x108
      51e:	2c090503          	lb	a0,704(s2)
-     522:	0101                	addi	sp,sp,0
+     522:	0101                	.2byte	0x101
      524:	38090503          	lb	a0,896(s2)
-     528:	0100                	addi	s0,sp,128
+     528:	0100                	.2byte	0x100
      52a:	28090503          	lb	a0,640(s2)
-     52e:	0101                	addi	sp,sp,0
+     52e:	0101                	.2byte	0x101
      530:	38090503          	lb	a0,896(s2)
-     534:	0100                	addi	s0,sp,128
+     534:	0100                	.2byte	0x100
      536:	4c090503          	lb	a0,1216(s2)
-     53a:	0100                	addi	s0,sp,128
+     53a:	0100                	.2byte	0x100
      53c:	2c090503          	lb	a0,704(s2)
-     540:	0101                	addi	sp,sp,0
+     540:	0101                	.2byte	0x101
      542:	28090503          	lb	a0,640(s2)
-     546:	0104                	addi	s1,sp,128
+     546:	0104                	.2byte	0x104
      548:	30090503          	lb	a0,768(s2)
-     54c:	0108                	addi	a0,sp,128
+     54c:	0108                	.2byte	0x108
      54e:	38090503          	lb	a0,896(s2)
-     552:	0100                	addi	s0,sp,128
+     552:	0100                	.2byte	0x100
      554:	38090503          	lb	a0,896(s2)
-     558:	0100                	addi	s0,sp,128
+     558:	0100                	.2byte	0x100
      55a:	2c090503          	lb	a0,704(s2)
-     55e:	0104                	addi	s1,sp,128
+     55e:	0104                	.2byte	0x104
      560:	34090503          	lb	a0,832(s2)
-     564:	0100                	addi	s0,sp,128
+     564:	0100                	.2byte	0x100
      566:	38090503          	lb	a0,896(s2)
-     56a:	0100                	addi	s0,sp,128
+     56a:	0100                	.2byte	0x100
      56c:	dc090503          	lb	a0,-576(s2)
-     570:	010a                	slli	sp,sp,0x2
+     570:	010a                	.2byte	0x10a
      572:	38090503          	lb	a0,896(s2)
-     576:	0100                	addi	s0,sp,128
+     576:	0100                	.2byte	0x100
      578:	38090503          	lb	a0,896(s2)
-     57c:	0100                	addi	s0,sp,128
+     57c:	0100                	.2byte	0x100
      57e:	4c090503          	lb	a0,1216(s2)
-     582:	0100                	addi	s0,sp,128
+     582:	0100                	.2byte	0x100
      584:	30090503          	lb	a0,768(s2)
-     588:	0108                	addi	a0,sp,128
+     588:	0108                	.2byte	0x108
      58a:	34090503          	lb	a0,832(s2)
-     58e:	0100                	addi	s0,sp,128
+     58e:	0100                	.2byte	0x100
      590:	3c090503          	lb	a0,960(s2)
-     594:	0100                	addi	s0,sp,128
+     594:	0100                	.2byte	0x100
      596:	6c090503          	lb	a0,1728(s2)
-     59a:	0100                	addi	s0,sp,128
+     59a:	0100                	.2byte	0x100
      59c:	6c090503          	lb	a0,1728(s2)
-     5a0:	0100                	addi	s0,sp,128
+     5a0:	0100                	.2byte	0x100
      5a2:	38090503          	lb	a0,896(s2)
-     5a6:	0100                	addi	s0,sp,128
+     5a6:	0100                	.2byte	0x100
      5a8:	38090503          	lb	a0,896(s2)
-     5ac:	0100                	addi	s0,sp,128
+     5ac:	0100                	.2byte	0x100
      5ae:	38090503          	lb	a0,896(s2)
-     5b2:	0100                	addi	s0,sp,128
+     5b2:	0100                	.2byte	0x100
      5b4:	38090503          	lb	a0,896(s2)
-     5b8:	0100                	addi	s0,sp,128
+     5b8:	0100                	.2byte	0x100
      5ba:	38090503          	lb	a0,896(s2)
-     5be:	0100                	addi	s0,sp,128
+     5be:	0100                	.2byte	0x100
      5c0:	38090503          	lb	a0,896(s2)
-     5c4:	0100                	addi	s0,sp,128
+     5c4:	0100                	.2byte	0x100
      5c6:	6c090503          	lb	a0,1728(s2)
-     5ca:	0100                	addi	s0,sp,128
+     5ca:	0100                	.2byte	0x100
      5cc:	40090503          	lb	a0,1024(s2)
-     5d0:	0100                	addi	s0,sp,128
+     5d0:	0100                	.2byte	0x100
      5d2:	dc090503          	lb	a0,-576(s2)
-     5d6:	010a                	slli	sp,sp,0x2
+     5d6:	010a                	.2byte	0x10a
      5d8:	34090503          	lb	a0,832(s2)
-     5dc:	0100                	addi	s0,sp,128
+     5dc:	0100                	.2byte	0x100
      5de:	38090503          	lb	a0,896(s2)
-     5e2:	0100                	addi	s0,sp,128
+     5e2:	0100                	.2byte	0x100
      5e4:	3c090503          	lb	a0,960(s2)
-     5e8:	0100                	addi	s0,sp,128
+     5e8:	0100                	.2byte	0x100
      5ea:	38090503          	lb	a0,896(s2)
-     5ee:	0100                	addi	s0,sp,128
+     5ee:	0100                	.2byte	0x100
      5f0:	2c090503          	lb	a0,704(s2)
-     5f4:	0104                	addi	s1,sp,128
+     5f4:	0104                	.2byte	0x104
      5f6:	3c090503          	lb	a0,960(s2)
-     5fa:	0100                	addi	s0,sp,128
+     5fa:	0100                	.2byte	0x100
      5fc:	38090503          	lb	a0,896(s2)
-     600:	0100                	addi	s0,sp,128
+     600:	0100                	.2byte	0x100
      602:	38090503          	lb	a0,896(s2)
-     606:	0100                	addi	s0,sp,128
+     606:	0100                	.2byte	0x100
      608:	2c090503          	lb	a0,704(s2)
-     60c:	0102                	c.slli64	sp
+     60c:	0102                	.2byte	0x102
      60e:	38090503          	lb	a0,896(s2)
-     612:	0100                	addi	s0,sp,128
+     612:	0100                	.2byte	0x100
      614:	30090503          	lb	a0,768(s2)
-     618:	0108                	addi	a0,sp,128
+     618:	0108                	.2byte	0x108
      61a:	38090503          	lb	a0,896(s2)
-     61e:	0100                	addi	s0,sp,128
+     61e:	0100                	.2byte	0x100
      620:	28090503          	lb	a0,640(s2)
-     624:	0102                	c.slli64	sp
+     624:	0102                	.2byte	0x102
      626:	38090503          	lb	a0,896(s2)
-     62a:	0100                	addi	s0,sp,128
+     62a:	0100                	.2byte	0x100
      62c:	3c090503          	lb	a0,960(s2)
-     630:	0100                	addi	s0,sp,128
+     630:	0100                	.2byte	0x100
      632:	44090503          	lb	a0,1088(s2)
-     636:	0100                	addi	s0,sp,128
+     636:	0100                	.2byte	0x100
      638:	3c090503          	lb	a0,960(s2)
-     63c:	0100                	addi	s0,sp,128
+     63c:	0100                	.2byte	0x100
      63e:	28090503          	lb	a0,640(s2)
-     642:	0101                	addi	sp,sp,0
+     642:	0101                	.2byte	0x101
      644:	34090503          	lb	a0,832(s2)
-     648:	0100                	addi	s0,sp,128
+     648:	0100                	.2byte	0x100
      64a:	6c090503          	lb	a0,1728(s2)
-     64e:	0100                	addi	s0,sp,128
+     64e:	0100                	.2byte	0x100
      650:	38090503          	lb	a0,896(s2)
-     654:	0100                	addi	s0,sp,128
+     654:	0100                	.2byte	0x100
      656:	48090503          	lb	a0,1152(s2)
-     65a:	0100                	addi	s0,sp,128
+     65a:	0100                	.2byte	0x100
      65c:	2c090503          	lb	a0,704(s2)
-     660:	0102                	c.slli64	sp
+     660:	0102                	.2byte	0x102
      662:	38090503          	lb	a0,896(s2)
-     666:	0100                	addi	s0,sp,128
+     666:	0100                	.2byte	0x100
      668:	38090503          	lb	a0,896(s2)
-     66c:	0100                	addi	s0,sp,128
+     66c:	0100                	.2byte	0x100
      66e:	34090503          	lb	a0,832(s2)
-     672:	0100                	addi	s0,sp,128
+     672:	0100                	.2byte	0x100
      674:	4c090503          	lb	a0,1216(s2)
-     678:	0100                	addi	s0,sp,128
+     678:	0100                	.2byte	0x100
      67a:	34090503          	lb	a0,832(s2)
-     67e:	0100                	addi	s0,sp,128
+     67e:	0100                	.2byte	0x100
      680:	2c090503          	lb	a0,704(s2)
-     684:	0104                	addi	s1,sp,128
+     684:	0104                	.2byte	0x104
      686:	2c090503          	lb	a0,704(s2)
-     68a:	0104                	addi	s1,sp,128
+     68a:	0104                	.2byte	0x104
      68c:	34090503          	lb	a0,832(s2)
-     690:	0100                	addi	s0,sp,128
+     690:	0100                	.2byte	0x100
      692:	dc090503          	lb	a0,-576(s2)
-     696:	010a                	slli	sp,sp,0x2
+     696:	010a                	.2byte	0x10a
      698:	3c090503          	lb	a0,960(s2)
-     69c:	0100                	addi	s0,sp,128
+     69c:	0100                	.2byte	0x100
      69e:	38090503          	lb	a0,896(s2)
-     6a2:	0100                	addi	s0,sp,128
+     6a2:	0100                	.2byte	0x100
      6a4:	38090503          	lb	a0,896(s2)
-     6a8:	0100                	addi	s0,sp,128
+     6a8:	0100                	.2byte	0x100
      6aa:	ac090503          	lb	a0,-1344(s2)
-     6ae:	0100                	addi	s0,sp,128
+     6ae:	0100                	.2byte	0x100
      6b0:	3c090503          	lb	a0,960(s2)
-     6b4:	0100                	addi	s0,sp,128
+     6b4:	0100                	.2byte	0x100
      6b6:	3c090503          	lb	a0,960(s2)
-     6ba:	0100                	addi	s0,sp,128
+     6ba:	0100                	.2byte	0x100
      6bc:	38090503          	lb	a0,896(s2)
-     6c0:	0100                	addi	s0,sp,128
+     6c0:	0100                	.2byte	0x100
      6c2:	38090503          	lb	a0,896(s2)
-     6c6:	0100                	addi	s0,sp,128
+     6c6:	0100                	.2byte	0x100
      6c8:	38090503          	lb	a0,896(s2)
-     6cc:	0100                	addi	s0,sp,128
+     6cc:	0100                	.2byte	0x100
      6ce:	38090503          	lb	a0,896(s2)
-     6d2:	0100                	addi	s0,sp,128
+     6d2:	0100                	.2byte	0x100
      6d4:	34090503          	lb	a0,832(s2)
-     6d8:	0100                	addi	s0,sp,128
+     6d8:	0100                	.2byte	0x100
      6da:	30090503          	lb	a0,768(s2)
-     6de:	0100                	addi	s0,sp,128
+     6de:	0100                	.2byte	0x100
      6e0:	40090503          	lb	a0,1024(s2)
-     6e4:	0100                	addi	s0,sp,128
+     6e4:	0100                	.2byte	0x100
      6e6:	34090503          	lb	a0,832(s2)
-     6ea:	0100                	addi	s0,sp,128
+     6ea:	0100                	.2byte	0x100
      6ec:	30090503          	lb	a0,768(s2)
-     6f0:	0100                	addi	s0,sp,128
+     6f0:	0100                	.2byte	0x100
      6f2:	40090503          	lb	a0,1024(s2)
-     6f6:	0100                	addi	s0,sp,128
+     6f6:	0100                	.2byte	0x100
      6f8:	d8090503          	lb	a0,-640(s2)
-     6fc:	010a                	slli	sp,sp,0x2
+     6fc:	010a                	.2byte	0x10a
      6fe:	34090503          	lb	a0,832(s2)
-     702:	0100                	addi	s0,sp,128
+     702:	0100                	.2byte	0x100
      704:	a4090503          	lb	a0,-1472(s2)
-     708:	0100                	addi	s0,sp,128
+     708:	0100                	.2byte	0x100
      70a:	34090503          	lb	a0,832(s2)
-     70e:	0100                	addi	s0,sp,128
+     70e:	0100                	.2byte	0x100
      710:	38090503          	lb	a0,896(s2)
-     714:	0100                	addi	s0,sp,128
+     714:	0100                	.2byte	0x100
      716:	28090503          	lb	a0,640(s2)
-     71a:	0101                	addi	sp,sp,0
+     71a:	0101                	.2byte	0x101
      71c:	34090503          	lb	a0,832(s2)
-     720:	0100                	addi	s0,sp,128
+     720:	0100                	.2byte	0x100
      722:	44090503          	lb	a0,1088(s2)
-     726:	0100                	addi	s0,sp,128
+     726:	0100                	.2byte	0x100
      728:	2c090503          	lb	a0,704(s2)
-     72c:	0108                	addi	a0,sp,128
+     72c:	0108                	.2byte	0x108
      72e:	a8090503          	lb	a0,-1408(s2)
-     732:	0100                	addi	s0,sp,128
+     732:	0100                	.2byte	0x100
      734:	38090503          	lb	a0,896(s2)
-     738:	0100                	addi	s0,sp,128
+     738:	0100                	.2byte	0x100
      73a:	40090503          	lb	a0,1024(s2)
-     73e:	0100                	addi	s0,sp,128
+     73e:	0100                	.2byte	0x100
      740:	a8090503          	lb	a0,-1408(s2)
-     744:	0100                	addi	s0,sp,128
+     744:	0100                	.2byte	0x100
      746:	34090503          	lb	a0,832(s2)
-     74a:	0100                	addi	s0,sp,128
+     74a:	0100                	.2byte	0x100
      74c:	30090503          	lb	a0,768(s2)
-     750:	0100                	addi	s0,sp,128
+     750:	0100                	.2byte	0x100
      752:	d8090503          	lb	a0,-640(s2)
-     756:	010a                	slli	sp,sp,0x2
+     756:	010a                	.2byte	0x10a
      758:	34090503          	lb	a0,832(s2)
-     75c:	0100                	addi	s0,sp,128
+     75c:	0100                	.2byte	0x100
      75e:	38090503          	lb	a0,896(s2)
-     762:	0100                	addi	s0,sp,128
+     762:	0100                	.2byte	0x100
      764:	28090503          	lb	a0,640(s2)
-     768:	0108                	addi	a0,sp,128
+     768:	0108                	.2byte	0x108
      76a:	30090503          	lb	a0,768(s2)
-     76e:	0100                	addi	s0,sp,128
+     76e:	0100                	.2byte	0x100
      770:	34090503          	lb	a0,832(s2)
-     774:	0100                	addi	s0,sp,128
+     774:	0100                	.2byte	0x100
      776:	6c090503          	lb	a0,1728(s2)
-     77a:	0100                	addi	s0,sp,128
+     77a:	0100                	.2byte	0x100
      77c:	38090503          	lb	a0,896(s2)
-     780:	0100                	addi	s0,sp,128
+     780:	0100                	.2byte	0x100
      782:	38090503          	lb	a0,896(s2)
-     786:	0100                	addi	s0,sp,128
+     786:	0100                	.2byte	0x100
      788:	3c090503          	lb	a0,960(s2)
-     78c:	0100                	addi	s0,sp,128
+     78c:	0100                	.2byte	0x100
      78e:	6c090503          	lb	a0,1728(s2)
-     792:	0100                	addi	s0,sp,128
+     792:	0100                	.2byte	0x100
      794:	2c090503          	lb	a0,704(s2)
-     798:	0104                	addi	s1,sp,128
+     798:	0104                	.2byte	0x104
      79a:	d8090503          	lb	a0,-640(s2)
-     79e:	010a                	slli	sp,sp,0x2
+     79e:	010a                	.2byte	0x10a
      7a0:	28090503          	lb	a0,640(s2)
-     7a4:	0104                	addi	s1,sp,128
+     7a4:	0104                	.2byte	0x104
      7a6:	38090503          	lb	a0,896(s2)
-     7aa:	0100                	addi	s0,sp,128
+     7aa:	0100                	.2byte	0x100
      7ac:	2c090503          	lb	a0,704(s2)
-     7b0:	0101                	addi	sp,sp,0
+     7b0:	0101                	.2byte	0x101
      7b2:	2c090503          	lb	a0,704(s2)
-     7b6:	0108                	addi	a0,sp,128
+     7b6:	0108                	.2byte	0x108
      7b8:	dc090503          	lb	a0,-576(s2)
-     7bc:	010a                	slli	sp,sp,0x2
+     7bc:	010a                	.2byte	0x10a
      7be:	38090503          	lb	a0,896(s2)
-     7c2:	0100                	addi	s0,sp,128
+     7c2:	0100                	.2byte	0x100
      7c4:	dc090503          	lb	a0,-576(s2)
-     7c8:	010a                	slli	sp,sp,0x2
+     7c8:	010a                	.2byte	0x10a
      7ca:	ac090503          	lb	a0,-1344(s2)
-     7ce:	0100                	addi	s0,sp,128
+     7ce:	0100                	.2byte	0x100
      7d0:	2c090503          	lb	a0,704(s2)
-     7d4:	0102                	c.slli64	sp
+     7d4:	0102                	.2byte	0x102
      7d6:	38090503          	lb	a0,896(s2)
-     7da:	0100                	addi	s0,sp,128
+     7da:	0100                	.2byte	0x100
      7dc:	28090503          	lb	a0,640(s2)
-     7e0:	0102                	c.slli64	sp
+     7e0:	0102                	.2byte	0x102
      7e2:	38090503          	lb	a0,896(s2)
-     7e6:	0100                	addi	s0,sp,128
+     7e6:	0100                	.2byte	0x100
      7e8:	38090503          	lb	a0,896(s2)
-     7ec:	0100                	addi	s0,sp,128
+     7ec:	0100                	.2byte	0x100
      7ee:	40090503          	lb	a0,1024(s2)
-     7f2:	0100                	addi	s0,sp,128
+     7f2:	0100                	.2byte	0x100
      7f4:	3c090503          	lb	a0,960(s2)
-     7f8:	0100                	addi	s0,sp,128
+     7f8:	0100                	.2byte	0x100
      7fa:	34090503          	lb	a0,832(s2)
-     7fe:	0100                	addi	s0,sp,128
+     7fe:	0100                	.2byte	0x100
      800:	30090503          	lb	a0,768(s2)
-     804:	0100                	addi	s0,sp,128
+     804:	0100                	.2byte	0x100
      806:	3c090503          	lb	a0,960(s2)
-     80a:	0100                	addi	s0,sp,128
+     80a:	0100                	.2byte	0x100
      80c:	2c090503          	lb	a0,704(s2)
-     810:	0108                	addi	a0,sp,128
+     810:	0108                	.2byte	0x108
      812:	34090503          	lb	a0,832(s2)
-     816:	0100                	addi	s0,sp,128
+     816:	0100                	.2byte	0x100
      818:	d8090503          	lb	a0,-640(s2)
-     81c:	010a                	slli	sp,sp,0x2
+     81c:	010a                	.2byte	0x10a
      81e:	3c090503          	lb	a0,960(s2)
-     822:	0100                	addi	s0,sp,128
+     822:	0100                	.2byte	0x100
      824:	2c090503          	lb	a0,704(s2)
-     828:	0108                	addi	a0,sp,128
+     828:	0108                	.2byte	0x108
      82a:	30090503          	lb	a0,768(s2)
-     82e:	0100                	addi	s0,sp,128
+     82e:	0100                	.2byte	0x100
      830:	34090503          	lb	a0,832(s2)
-     834:	0100                	addi	s0,sp,128
+     834:	0100                	.2byte	0x100
      836:	28090503          	lb	a0,640(s2)
-     83a:	0108                	addi	a0,sp,128
+     83a:	0108                	.2byte	0x108
      83c:	a8090503          	lb	a0,-1408(s2)
-     840:	0100                	addi	s0,sp,128
+     840:	0100                	.2byte	0x100
      842:	28090503          	lb	a0,640(s2)
-     846:	0102                	c.slli64	sp
+     846:	0102                	.2byte	0x102
      848:	64090503          	lb	a0,1600(s2)
-     84c:	0100                	addi	s0,sp,128
+     84c:	0100                	.2byte	0x100
      84e:	34090503          	lb	a0,832(s2)
-     852:	0100                	addi	s0,sp,128
+     852:	0100                	.2byte	0x100
      854:	68090503          	lb	a0,1664(s2)
-     858:	0100                	addi	s0,sp,128
+     858:	0100                	.2byte	0x100
      85a:	34090503          	lb	a0,832(s2)
-     85e:	0100                	addi	s0,sp,128
+     85e:	0100                	.2byte	0x100
      860:	a8090503          	lb	a0,-1408(s2)
-     864:	0100                	addi	s0,sp,128
+     864:	0100                	.2byte	0x100
      866:	2c090503          	lb	a0,704(s2)
-     86a:	0108                	addi	a0,sp,128
+     86a:	0108                	.2byte	0x108
      86c:	34090503          	lb	a0,832(s2)
-     870:	0100                	addi	s0,sp,128
+     870:	0100                	.2byte	0x100
      872:	30090503          	lb	a0,768(s2)
-     876:	0100                	addi	s0,sp,128
+     876:	0100                	.2byte	0x100
      878:	34090503          	lb	a0,832(s2)
-     87c:	0100                	addi	s0,sp,128
+     87c:	0100                	.2byte	0x100
      87e:	3c090503          	lb	a0,960(s2)
-     882:	0100                	addi	s0,sp,128
+     882:	0100                	.2byte	0x100
      884:	3c090503          	lb	a0,960(s2)
-     888:	0100                	addi	s0,sp,128
+     888:	0100                	.2byte	0x100
      88a:	34090503          	lb	a0,832(s2)
-     88e:	0100                	addi	s0,sp,128
+     88e:	0100                	.2byte	0x100
      890:	24090503          	lb	a0,576(s2)
-     894:	0101                	addi	sp,sp,0
+     894:	0101                	.2byte	0x101
      896:	38090503          	lb	a0,896(s2)
-     89a:	0100                	addi	s0,sp,128
+     89a:	0100                	.2byte	0x100
      89c:	4c090503          	lb	a0,1216(s2)
-     8a0:	0100                	addi	s0,sp,128
+     8a0:	0100                	.2byte	0x100
      8a2:	38090503          	lb	a0,896(s2)
-     8a6:	0100                	addi	s0,sp,128
+     8a6:	0100                	.2byte	0x100
      8a8:	40090503          	lb	a0,1024(s2)
-     8ac:	0100                	addi	s0,sp,128
+     8ac:	0100                	.2byte	0x100
      8ae:	38090503          	lb	a0,896(s2)
-     8b2:	0100                	addi	s0,sp,128
+     8b2:	0100                	.2byte	0x100
      8b4:	2c090503          	lb	a0,704(s2)
-     8b8:	0101                	addi	sp,sp,0
+     8b8:	0101                	.2byte	0x101
      8ba:	4c090503          	lb	a0,1216(s2)
-     8be:	0100                	addi	s0,sp,128
+     8be:	0100                	.2byte	0x100
      8c0:	28090503          	lb	a0,640(s2)
-     8c4:	0104                	addi	s1,sp,128
+     8c4:	0104                	.2byte	0x104
      8c6:	38090503          	lb	a0,896(s2)
-     8ca:	0100                	addi	s0,sp,128
+     8ca:	0100                	.2byte	0x100
      8cc:	48090503          	lb	a0,1152(s2)
-     8d0:	0100                	addi	s0,sp,128
+     8d0:	0100                	.2byte	0x100
      8d2:	38090503          	lb	a0,896(s2)
-     8d6:	0100                	addi	s0,sp,128
+     8d6:	0100                	.2byte	0x100
      8d8:	40090503          	lb	a0,1024(s2)
-     8dc:	0100                	addi	s0,sp,128
+     8dc:	0100                	.2byte	0x100
      8de:	28090503          	lb	a0,640(s2)
-     8e2:	0104                	addi	s1,sp,128
+     8e2:	0104                	.2byte	0x104
      8e4:	30090503          	lb	a0,768(s2)
-     8e8:	0108                	addi	a0,sp,128
+     8e8:	0108                	.2byte	0x108
      8ea:	38090503          	lb	a0,896(s2)
-     8ee:	0100                	addi	s0,sp,128
+     8ee:	0100                	.2byte	0x100
      8f0:	4c090503          	lb	a0,1216(s2)
-     8f4:	0100                	addi	s0,sp,128
+     8f4:	0100                	.2byte	0x100
      8f6:	6c090503          	lb	a0,1728(s2)
-     8fa:	0100                	addi	s0,sp,128
+     8fa:	0100                	.2byte	0x100
      8fc:	2c090503          	lb	a0,704(s2)
-     900:	0104                	addi	s1,sp,128
+     900:	0104                	.2byte	0x104
      902:	2c090503          	lb	a0,704(s2)
-     906:	0102                	c.slli64	sp
+     906:	0102                	.2byte	0x102
      908:	3c090503          	lb	a0,960(s2)
-     90c:	0100                	addi	s0,sp,128
+     90c:	0100                	.2byte	0x100
      90e:	38090503          	lb	a0,896(s2)
-     912:	0100                	addi	s0,sp,128
+     912:	0100                	.2byte	0x100
      914:	38090503          	lb	a0,896(s2)
-     918:	0100                	addi	s0,sp,128
+     918:	0100                	.2byte	0x100
      91a:	ac090503          	lb	a0,-1344(s2)
-     91e:	0100                	addi	s0,sp,128
+     91e:	0100                	.2byte	0x100
      920:	34090503          	lb	a0,832(s2)
-     924:	0100                	addi	s0,sp,128
+     924:	0100                	.2byte	0x100
      926:	3c090503          	lb	a0,960(s2)
-     92a:	0100                	addi	s0,sp,128
+     92a:	0100                	.2byte	0x100
      92c:	40090503          	lb	a0,1024(s2)
-     930:	0100                	addi	s0,sp,128
+     930:	0100                	.2byte	0x100
      932:	3c090503          	lb	a0,960(s2)
-     936:	0100                	addi	s0,sp,128
+     936:	0100                	.2byte	0x100
      938:	40090503          	lb	a0,1024(s2)
-     93c:	0100                	addi	s0,sp,128
+     93c:	0100                	.2byte	0x100
      93e:	34090503          	lb	a0,832(s2)
-     942:	0100                	addi	s0,sp,128
+     942:	0100                	.2byte	0x100
      944:	2c090503          	lb	a0,704(s2)
-     948:	0102                	c.slli64	sp
+     948:	0102                	.2byte	0x102
      94a:	38090503          	lb	a0,896(s2)
-     94e:	0100                	addi	s0,sp,128
+     94e:	0100                	.2byte	0x100
      950:	2c090503          	lb	a0,704(s2)
-     954:	0104                	addi	s1,sp,128
+     954:	0104                	.2byte	0x104
      956:	38090503          	lb	a0,896(s2)
-     95a:	0100                	addi	s0,sp,128
+     95a:	0100                	.2byte	0x100
      95c:	38090503          	lb	a0,896(s2)
-     960:	0100                	addi	s0,sp,128
+     960:	0100                	.2byte	0x100
      962:	d8090503          	lb	a0,-640(s2)
-     966:	010a                	slli	sp,sp,0x2
+     966:	010a                	.2byte	0x10a
      968:	38090503          	lb	a0,896(s2)
-     96c:	0100                	addi	s0,sp,128
+     96c:	0100                	.2byte	0x100
      96e:	38090503          	lb	a0,896(s2)
-     972:	0100                	addi	s0,sp,128
+     972:	0100                	.2byte	0x100
      974:	28090503          	lb	a0,640(s2)
-     978:	0102                	c.slli64	sp
+     978:	0102                	.2byte	0x102
      97a:	6c090503          	lb	a0,1728(s2)
-     97e:	0100                	addi	s0,sp,128
+     97e:	0100                	.2byte	0x100
      980:	dc090503          	lb	a0,-576(s2)
-     984:	010a                	slli	sp,sp,0x2
+     984:	010a                	.2byte	0x10a
      986:	ac090503          	lb	a0,-1344(s2)
-     98a:	0100                	addi	s0,sp,128
+     98a:	0100                	.2byte	0x100
      98c:	4c090503          	lb	a0,1216(s2)
-     990:	0100                	addi	s0,sp,128
+     990:	0100                	.2byte	0x100
      992:	4c090503          	lb	a0,1216(s2)
-     996:	0100                	addi	s0,sp,128
+     996:	0100                	.2byte	0x100
      998:	3c090503          	lb	a0,960(s2)
-     99c:	0100                	addi	s0,sp,128
+     99c:	0100                	.2byte	0x100
      99e:	38090503          	lb	a0,896(s2)
-     9a2:	0100                	addi	s0,sp,128
+     9a2:	0100                	.2byte	0x100
      9a4:	4c090503          	lb	a0,1216(s2)
-     9a8:	0100                	addi	s0,sp,128
+     9a8:	0100                	.2byte	0x100
      9aa:	2c090503          	lb	a0,704(s2)
-     9ae:	0104                	addi	s1,sp,128
+     9ae:	0104                	.2byte	0x104
      9b0:	2c090503          	lb	a0,704(s2)
-     9b4:	0104                	addi	s1,sp,128
+     9b4:	0104                	.2byte	0x104
      9b6:	d8090503          	lb	a0,-640(s2)
-     9ba:	010a                	slli	sp,sp,0x2
+     9ba:	010a                	.2byte	0x10a
      9bc:	30090503          	lb	a0,768(s2)
-     9c0:	0100                	addi	s0,sp,128
+     9c0:	0100                	.2byte	0x100
      9c2:	34090503          	lb	a0,832(s2)
-     9c6:	0100                	addi	s0,sp,128
+     9c6:	0100                	.2byte	0x100
      9c8:	a8090503          	lb	a0,-1408(s2)
-     9cc:	0100                	addi	s0,sp,128
+     9cc:	0100                	.2byte	0x100
      9ce:	28090503          	lb	a0,640(s2)
-     9d2:	0108                	addi	a0,sp,128
+     9d2:	0108                	.2byte	0x108
      9d4:	28090503          	lb	a0,640(s2)
-     9d8:	0101                	addi	sp,sp,0
+     9d8:	0101                	.2byte	0x101
      9da:	28090503          	lb	a0,640(s2)
-     9de:	0102                	c.slli64	sp
+     9de:	0102                	.2byte	0x102
      9e0:	34090503          	lb	a0,832(s2)
-     9e4:	0100                	addi	s0,sp,128
+     9e4:	0100                	.2byte	0x100
      9e6:	24090503          	lb	a0,576(s2)
-     9ea:	0102                	c.slli64	sp
+     9ea:	0102                	.2byte	0x102
      9ec:	48090503          	lb	a0,1152(s2)
-     9f0:	0100                	addi	s0,sp,128
+     9f0:	0100                	.2byte	0x100
      9f2:	30090503          	lb	a0,768(s2)
-     9f6:	0100                	addi	s0,sp,128
+     9f6:	0100                	.2byte	0x100
      9f8:	34090503          	lb	a0,832(s2)
-     9fc:	0100                	addi	s0,sp,128
+     9fc:	0100                	.2byte	0x100
      9fe:	a8090503          	lb	a0,-1408(s2)
-     a02:	0100                	addi	s0,sp,128
+     a02:	0100                	.2byte	0x100
      a04:	d4090503          	lb	a0,-704(s2)
-     a08:	010a                	slli	sp,sp,0x2
+     a08:	010a                	.2byte	0x10a
      a0a:	34090503          	lb	a0,832(s2)
-     a0e:	0100                	addi	s0,sp,128
+     a0e:	0100                	.2byte	0x100
      a10:	34090503          	lb	a0,832(s2)
-     a14:	0100                	addi	s0,sp,128
+     a14:	0100                	.2byte	0x100
      a16:	40090503          	lb	a0,1024(s2)
-     a1a:	0100                	addi	s0,sp,128
+     a1a:	0100                	.2byte	0x100
      a1c:	28090503          	lb	a0,640(s2)
-     a20:	0102                	c.slli64	sp
+     a20:	0102                	.2byte	0x102
      a22:	34090503          	lb	a0,832(s2)
-     a26:	0100                	addi	s0,sp,128
+     a26:	0100                	.2byte	0x100
      a28:	38090503          	lb	a0,896(s2)
-     a2c:	0100                	addi	s0,sp,128
+     a2c:	0100                	.2byte	0x100
      a2e:	30090503          	lb	a0,768(s2)
-     a32:	0100                	addi	s0,sp,128
+     a32:	0100                	.2byte	0x100
      a34:	38090503          	lb	a0,896(s2)
-     a38:	0100                	addi	s0,sp,128
+     a38:	0100                	.2byte	0x100
      a3a:	28090503          	lb	a0,640(s2)
-     a3e:	0102                	c.slli64	sp
+     a3e:	0102                	.2byte	0x102
      a40:	34090503          	lb	a0,832(s2)
-     a44:	0100                	addi	s0,sp,128
+     a44:	0100                	.2byte	0x100
      a46:	34090503          	lb	a0,832(s2)
-     a4a:	0100                	addi	s0,sp,128
+     a4a:	0100                	.2byte	0x100
      a4c:	24090503          	lb	a0,576(s2)
-     a50:	0102                	c.slli64	sp
+     a50:	0102                	.2byte	0x102
      a52:	34090503          	lb	a0,832(s2)
-     a56:	0100                	addi	s0,sp,128
+     a56:	0100                	.2byte	0x100
      a58:	3c090503          	lb	a0,960(s2)
-     a5c:	0100                	addi	s0,sp,128
+     a5c:	0100                	.2byte	0x100
      a5e:	38090503          	lb	a0,896(s2)
-     a62:	0100                	addi	s0,sp,128
+     a62:	0100                	.2byte	0x100
      a64:	3c090503          	lb	a0,960(s2)
-     a68:	0100                	addi	s0,sp,128
+     a68:	0100                	.2byte	0x100
      a6a:	3c090503          	lb	a0,960(s2)
-     a6e:	0100                	addi	s0,sp,128
+     a6e:	0100                	.2byte	0x100
      a70:	38090503          	lb	a0,896(s2)
-     a74:	0100                	addi	s0,sp,128
+     a74:	0100                	.2byte	0x100
      a76:	6c090503          	lb	a0,1728(s2)
-     a7a:	0100                	addi	s0,sp,128
+     a7a:	0100                	.2byte	0x100
      a7c:	34090503          	lb	a0,832(s2)
-     a80:	0100                	addi	s0,sp,128
+     a80:	0100                	.2byte	0x100
      a82:	38090503          	lb	a0,896(s2)
-     a86:	0100                	addi	s0,sp,128
+     a86:	0100                	.2byte	0x100
      a88:	2c090503          	lb	a0,704(s2)
-     a8c:	0108                	addi	a0,sp,128
+     a8c:	0108                	.2byte	0x108
      a8e:	38090503          	lb	a0,896(s2)
-     a92:	0100                	addi	s0,sp,128
+     a92:	0100                	.2byte	0x100
      a94:	38090503          	lb	a0,896(s2)
-     a98:	0100                	addi	s0,sp,128
+     a98:	0100                	.2byte	0x100
      a9a:	34090503          	lb	a0,832(s2)
-     a9e:	0100                	addi	s0,sp,128
+     a9e:	0100                	.2byte	0x100
      aa0:	38090503          	lb	a0,896(s2)
-     aa4:	0100                	addi	s0,sp,128
+     aa4:	0100                	.2byte	0x100
      aa6:	38090503          	lb	a0,896(s2)
-     aaa:	0100                	addi	s0,sp,128
+     aaa:	0100                	.2byte	0x100
      aac:	2c090503          	lb	a0,704(s2)
-     ab0:	0104                	addi	s1,sp,128
+     ab0:	0104                	.2byte	0x104
      ab2:	6c090503          	lb	a0,1728(s2)
-     ab6:	0100                	addi	s0,sp,128
+     ab6:	0100                	.2byte	0x100
      ab8:	30090503          	lb	a0,768(s2)
-     abc:	0108                	addi	a0,sp,128
+     abc:	0108                	.2byte	0x108
      abe:	38090503          	lb	a0,896(s2)
-     ac2:	0100                	addi	s0,sp,128
+     ac2:	0100                	.2byte	0x100
      ac4:	34090503          	lb	a0,832(s2)
-     ac8:	0100                	addi	s0,sp,128
+     ac8:	0100                	.2byte	0x100
      aca:	4c090503          	lb	a0,1216(s2)
-     ace:	0100                	addi	s0,sp,128
+     ace:	0100                	.2byte	0x100
      ad0:	38090503          	lb	a0,896(s2)
-     ad4:	0100                	addi	s0,sp,128
+     ad4:	0100                	.2byte	0x100
      ad6:	4c090503          	lb	a0,1216(s2)
-     ada:	0100                	addi	s0,sp,128
+     ada:	0100                	.2byte	0x100
      adc:	28090503          	lb	a0,640(s2)
-     ae0:	0101                	addi	sp,sp,0
+     ae0:	0101                	.2byte	0x101
      ae2:	d8090503          	lb	a0,-640(s2)
-     ae6:	010a                	slli	sp,sp,0x2
+     ae6:	010a                	.2byte	0x10a
      ae8:	28090503          	lb	a0,640(s2)
-     aec:	0104                	addi	s1,sp,128
+     aec:	0104                	.2byte	0x104
      aee:	38090503          	lb	a0,896(s2)
-     af2:	0100                	addi	s0,sp,128
+     af2:	0100                	.2byte	0x100
      af4:	dc090503          	lb	a0,-576(s2)
-     af8:	010a                	slli	sp,sp,0x2
+     af8:	010a                	.2byte	0x10a
      afa:	38090503          	lb	a0,896(s2)
-     afe:	0100                	addi	s0,sp,128
+     afe:	0100                	.2byte	0x100
      b00:	2c090503          	lb	a0,704(s2)
-     b04:	0102                	c.slli64	sp
+     b04:	0102                	.2byte	0x102
      b06:	dc090503          	lb	a0,-576(s2)
-     b0a:	010a                	slli	sp,sp,0x2
+     b0a:	010a                	.2byte	0x10a
      b0c:	38090503          	lb	a0,896(s2)
-     b10:	0100                	addi	s0,sp,128
+     b10:	0100                	.2byte	0x100
      b12:	2c090503          	lb	a0,704(s2)
-     b16:	0108                	addi	a0,sp,128
+     b16:	0108                	.2byte	0x108
      b18:	dc090503          	lb	a0,-576(s2)
-     b1c:	010a                	slli	sp,sp,0x2
+     b1c:	010a                	.2byte	0x10a
      b1e:	d8090503          	lb	a0,-640(s2)
-     b22:	010a                	slli	sp,sp,0x2
+     b22:	010a                	.2byte	0x10a
      b24:	38090503          	lb	a0,896(s2)
-     b28:	0100                	addi	s0,sp,128
+     b28:	0100                	.2byte	0x100
      b2a:	38090503          	lb	a0,896(s2)
-     b2e:	0100                	addi	s0,sp,128
+     b2e:	0100                	.2byte	0x100
      b30:	34090503          	lb	a0,832(s2)
-     b34:	0100                	addi	s0,sp,128
+     b34:	0100                	.2byte	0x100
      b36:	2c090503          	lb	a0,704(s2)
-     b3a:	0102                	c.slli64	sp
+     b3a:	0102                	.2byte	0x102
      b3c:	38090503          	lb	a0,896(s2)
-     b40:	0100                	addi	s0,sp,128
+     b40:	0100                	.2byte	0x100
      b42:	38090503          	lb	a0,896(s2)
-     b46:	0100                	addi	s0,sp,128
+     b46:	0100                	.2byte	0x100
      b48:	2c090503          	lb	a0,704(s2)
-     b4c:	0104                	addi	s1,sp,128
+     b4c:	0104                	.2byte	0x104
      b4e:	30090503          	lb	a0,768(s2)
-     b52:	0108                	addi	a0,sp,128
+     b52:	0108                	.2byte	0x108
      b54:	34090503          	lb	a0,832(s2)
-     b58:	0100                	addi	s0,sp,128
+     b58:	0100                	.2byte	0x100
      b5a:	34090503          	lb	a0,832(s2)
-     b5e:	0100                	addi	s0,sp,128
+     b5e:	0100                	.2byte	0x100
      b60:	28090503          	lb	a0,640(s2)
-     b64:	0102                	c.slli64	sp
+     b64:	0102                	.2byte	0x102
      b66:	ac090503          	lb	a0,-1344(s2)
-     b6a:	0100                	addi	s0,sp,128
+     b6a:	0100                	.2byte	0x100
      b6c:	3c090503          	lb	a0,960(s2)
-     b70:	0100                	addi	s0,sp,128
+     b70:	0100                	.2byte	0x100
      b72:	34090503          	lb	a0,832(s2)
-     b76:	0100                	addi	s0,sp,128
+     b76:	0100                	.2byte	0x100
      b78:	dc090503          	lb	a0,-576(s2)
-     b7c:	010a                	slli	sp,sp,0x2
+     b7c:	010a                	.2byte	0x10a
      b7e:	2c090503          	lb	a0,704(s2)
-     b82:	0102                	c.slli64	sp
+     b82:	0102                	.2byte	0x102
      b84:	38090503          	lb	a0,896(s2)
-     b88:	0100                	addi	s0,sp,128
+     b88:	0100                	.2byte	0x100
      b8a:	34090503          	lb	a0,832(s2)
-     b8e:	0100                	addi	s0,sp,128
+     b8e:	0100                	.2byte	0x100
      b90:	ac090503          	lb	a0,-1344(s2)
-     b94:	0100                	addi	s0,sp,128
+     b94:	0100                	.2byte	0x100
      b96:	34090503          	lb	a0,832(s2)
-     b9a:	0100                	addi	s0,sp,128
+     b9a:	0100                	.2byte	0x100
      b9c:	2c090503          	lb	a0,704(s2)
-     ba0:	0101                	addi	sp,sp,0
+     ba0:	0101                	.2byte	0x101
      ba2:	2c090503          	lb	a0,704(s2)
-     ba6:	0104                	addi	s1,sp,128
+     ba6:	0104                	.2byte	0x104
      ba8:	28090503          	lb	a0,640(s2)
-     bac:	0101                	addi	sp,sp,0
+     bac:	0101                	.2byte	0x101
      bae:	6c090503          	lb	a0,1728(s2)
-     bb2:	0100                	addi	s0,sp,128
+     bb2:	0100                	.2byte	0x100
      bb4:	38090503          	lb	a0,896(s2)
-     bb8:	0100                	addi	s0,sp,128
+     bb8:	0100                	.2byte	0x100
      bba:	38090503          	lb	a0,896(s2)
-     bbe:	0100                	addi	s0,sp,128
+     bbe:	0100                	.2byte	0x100
      bc0:	38090503          	lb	a0,896(s2)
-     bc4:	0100                	addi	s0,sp,128
+     bc4:	0100                	.2byte	0x100
      bc6:	38090503          	lb	a0,896(s2)
-     bca:	0100                	addi	s0,sp,128
+     bca:	0100                	.2byte	0x100
      bcc:	38090503          	lb	a0,896(s2)
-     bd0:	0100                	addi	s0,sp,128
+     bd0:	0100                	.2byte	0x100
      bd2:	34090503          	lb	a0,832(s2)
-     bd6:	0100                	addi	s0,sp,128
+     bd6:	0100                	.2byte	0x100
      bd8:	6c090503          	lb	a0,1728(s2)
-     bdc:	0100                	addi	s0,sp,128
+     bdc:	0100                	.2byte	0x100
      bde:	ac090503          	lb	a0,-1344(s2)
-     be2:	0100                	addi	s0,sp,128
+     be2:	0100                	.2byte	0x100
      be4:	38090503          	lb	a0,896(s2)
-     be8:	0100                	addi	s0,sp,128
+     be8:	0100                	.2byte	0x100
      bea:	3c090503          	lb	a0,960(s2)
-     bee:	0100                	addi	s0,sp,128
+     bee:	0100                	.2byte	0x100
      bf0:	34090503          	lb	a0,832(s2)
-     bf4:	0100                	addi	s0,sp,128
+     bf4:	0100                	.2byte	0x100
      bf6:	34090503          	lb	a0,832(s2)
-     bfa:	0100                	addi	s0,sp,128
+     bfa:	0100                	.2byte	0x100
      bfc:	3c090503          	lb	a0,960(s2)
-     c00:	0100                	addi	s0,sp,128
+     c00:	0100                	.2byte	0x100
      c02:	3c090503          	lb	a0,960(s2)
-     c06:	0100                	addi	s0,sp,128
+     c06:	0100                	.2byte	0x100
      c08:	34090503          	lb	a0,832(s2)
-     c0c:	0100                	addi	s0,sp,128
+     c0c:	0100                	.2byte	0x100
      c0e:	38090503          	lb	a0,896(s2)
-     c12:	0100                	addi	s0,sp,128
+     c12:	0100                	.2byte	0x100
      c14:	38090503          	lb	a0,896(s2)
-     c18:	0100                	addi	s0,sp,128
+     c18:	0100                	.2byte	0x100
      c1a:	2c090503          	lb	a0,704(s2)
-     c1e:	0101                	addi	sp,sp,0
+     c1e:	0101                	.2byte	0x101
      c20:	28090503          	lb	a0,640(s2)
-     c24:	0101                	addi	sp,sp,0
+     c24:	0101                	.2byte	0x101
      c26:	38090503          	lb	a0,896(s2)
-     c2a:	0100                	addi	s0,sp,128
+     c2a:	0100                	.2byte	0x100
      c2c:	40090503          	lb	a0,1024(s2)
-     c30:	0100                	addi	s0,sp,128
+     c30:	0100                	.2byte	0x100
      c32:	38090503          	lb	a0,896(s2)
-     c36:	0100                	addi	s0,sp,128
+     c36:	0100                	.2byte	0x100
      c38:	ac090503          	lb	a0,-1344(s2)
-     c3c:	0100                	addi	s0,sp,128
+     c3c:	0100                	.2byte	0x100
      c3e:	a8090503          	lb	a0,-1408(s2)
-     c42:	0100                	addi	s0,sp,128
+     c42:	0100                	.2byte	0x100
      c44:	38090503          	lb	a0,896(s2)
-     c48:	0100                	addi	s0,sp,128
+     c48:	0100                	.2byte	0x100
      c4a:	40090503          	lb	a0,1024(s2)
-     c4e:	0100                	addi	s0,sp,128
+     c4e:	0100                	.2byte	0x100
      c50:	4c090503          	lb	a0,1216(s2)
-     c54:	0100                	addi	s0,sp,128
+     c54:	0100                	.2byte	0x100
      c56:	2c090503          	lb	a0,704(s2)
-     c5a:	0104                	addi	s1,sp,128
+     c5a:	0104                	.2byte	0x104
      c5c:	38090503          	lb	a0,896(s2)
-     c60:	0100                	addi	s0,sp,128
+     c60:	0100                	.2byte	0x100
      c62:	ac090503          	lb	a0,-1344(s2)
-     c66:	0100                	addi	s0,sp,128
+     c66:	0100                	.2byte	0x100
      c68:	34090503          	lb	a0,832(s2)
-     c6c:	0100                	addi	s0,sp,128
+     c6c:	0100                	.2byte	0x100
      c6e:	2c090503          	lb	a0,704(s2)
-     c72:	0101                	addi	sp,sp,0
+     c72:	0101                	.2byte	0x101
      c74:	38090503          	lb	a0,896(s2)
-     c78:	0100                	addi	s0,sp,128
+     c78:	0100                	.2byte	0x100
      c7a:	38090503          	lb	a0,896(s2)
-     c7e:	0100                	addi	s0,sp,128
+     c7e:	0100                	.2byte	0x100
      c80:	68090503          	lb	a0,1664(s2)
-     c84:	0100                	addi	s0,sp,128
+     c84:	0100                	.2byte	0x100
      c86:	48090503          	lb	a0,1152(s2)
-     c8a:	0100                	addi	s0,sp,128
+     c8a:	0100                	.2byte	0x100
      c8c:	34090503          	lb	a0,832(s2)
-     c90:	0100                	addi	s0,sp,128
+     c90:	0100                	.2byte	0x100
      c92:	2c090503          	lb	a0,704(s2)
-     c96:	0101                	addi	sp,sp,0
+     c96:	0101                	.2byte	0x101
      c98:	38090503          	lb	a0,896(s2)
-     c9c:	0100                	addi	s0,sp,128
+     c9c:	0100                	.2byte	0x100
      c9e:	34090503          	lb	a0,832(s2)
-     ca2:	0100                	addi	s0,sp,128
+     ca2:	0100                	.2byte	0x100
      ca4:	4c090503          	lb	a0,1216(s2)
-     ca8:	0100                	addi	s0,sp,128
+     ca8:	0100                	.2byte	0x100
      caa:	38090503          	lb	a0,896(s2)
-     cae:	0100                	addi	s0,sp,128
+     cae:	0100                	.2byte	0x100
      cb0:	3c090503          	lb	a0,960(s2)
-     cb4:	0100                	addi	s0,sp,128
+     cb4:	0100                	.2byte	0x100
      cb6:	28090503          	lb	a0,640(s2)
-     cba:	0102                	c.slli64	sp
+     cba:	0102                	.2byte	0x102
      cbc:	44090503          	lb	a0,1088(s2)
-     cc0:	0100                	addi	s0,sp,128
+     cc0:	0100                	.2byte	0x100
      cc2:	68090503          	lb	a0,1664(s2)
-     cc6:	0100                	addi	s0,sp,128
+     cc6:	0100                	.2byte	0x100
      cc8:	4c090103          	lb	sp,1216(s2)
-     ccc:	0100                	addi	s0,sp,128
+     ccc:	0100                	.2byte	0x100
      cce:	08090503          	lb	a0,128(s2)
-     cd2:	0100                	addi	s0,sp,128
+     cd2:	0100                	.2byte	0x100
      cd4:	6c090503          	lb	a0,1728(s2)
-     cd8:	0100                	addi	s0,sp,128
+     cd8:	0100                	.2byte	0x100
      cda:	40090503          	lb	a0,1024(s2)
-     cde:	0100                	addi	s0,sp,128
+     cde:	0100                	.2byte	0x100
      ce0:	ac090503          	lb	a0,-1344(s2)
-     ce4:	0100                	addi	s0,sp,128
+     ce4:	0100                	.2byte	0x100
      ce6:	2c090503          	lb	a0,704(s2)
-     cea:	0102                	c.slli64	sp
+     cea:	0102                	.2byte	0x102
      cec:	40090503          	lb	a0,1024(s2)
-     cf0:	0100                	addi	s0,sp,128
+     cf0:	0100                	.2byte	0x100
      cf2:	3c090503          	lb	a0,960(s2)
-     cf6:	0100                	addi	s0,sp,128
+     cf6:	0100                	.2byte	0x100
      cf8:	38090503          	lb	a0,896(s2)
-     cfc:	0100                	addi	s0,sp,128
+     cfc:	0100                	.2byte	0x100
      cfe:	dc090503          	lb	a0,-576(s2)
-     d02:	010a                	slli	sp,sp,0x2
+     d02:	010a                	.2byte	0x10a
      d04:	38090503          	lb	a0,896(s2)
-     d08:	0100                	addi	s0,sp,128
+     d08:	0100                	.2byte	0x100
      d0a:	2c090503          	lb	a0,704(s2)
-     d0e:	0102                	c.slli64	sp
+     d0e:	0102                	.2byte	0x102
      d10:	38090503          	lb	a0,896(s2)
-     d14:	0100                	addi	s0,sp,128
+     d14:	0100                	.2byte	0x100
      d16:	38090503          	lb	a0,896(s2)
-     d1a:	0100                	addi	s0,sp,128
+     d1a:	0100                	.2byte	0x100
      d1c:	34090503          	lb	a0,832(s2)
-     d20:	0100                	addi	s0,sp,128
+     d20:	0100                	.2byte	0x100
      d22:	48090503          	lb	a0,1152(s2)
-     d26:	0100                	addi	s0,sp,128
+     d26:	0100                	.2byte	0x100
      d28:	a8090503          	lb	a0,-1408(s2)
-     d2c:	0100                	addi	s0,sp,128
+     d2c:	0100                	.2byte	0x100
      d2e:	2c090503          	lb	a0,704(s2)
-     d32:	0101                	addi	sp,sp,0
+     d32:	0101                	.2byte	0x101
      d34:	38090503          	lb	a0,896(s2)
-     d38:	0100                	addi	s0,sp,128
+     d38:	0100                	.2byte	0x100
      d3a:	68090503          	lb	a0,1664(s2)
-     d3e:	0100                	addi	s0,sp,128
+     d3e:	0100                	.2byte	0x100
      d40:	6c090503          	lb	a0,1728(s2)
-     d44:	0100                	addi	s0,sp,128
+     d44:	0100                	.2byte	0x100
      d46:	38090503          	lb	a0,896(s2)
-     d4a:	0100                	addi	s0,sp,128
+     d4a:	0100                	.2byte	0x100
      d4c:	2c090503          	lb	a0,704(s2)
-     d50:	0102                	c.slli64	sp
+     d50:	0102                	.2byte	0x102
      d52:	2c090503          	lb	a0,704(s2)
-     d56:	0108                	addi	a0,sp,128
+     d56:	0108                	.2byte	0x108
      d58:	38090503          	lb	a0,896(s2)
-     d5c:	0100                	addi	s0,sp,128
+     d5c:	0100                	.2byte	0x100
      d5e:	28090503          	lb	a0,640(s2)
-     d62:	0104                	addi	s1,sp,128
+     d62:	0104                	.2byte	0x104
      d64:	38090503          	lb	a0,896(s2)
-     d68:	0100                	addi	s0,sp,128
+     d68:	0100                	.2byte	0x100
      d6a:	ac090503          	lb	a0,-1344(s2)
-     d6e:	0100                	addi	s0,sp,128
+     d6e:	0100                	.2byte	0x100
      d70:	38090503          	lb	a0,896(s2)
-     d74:	0100                	addi	s0,sp,128
+     d74:	0100                	.2byte	0x100
      d76:	ac090503          	lb	a0,-1344(s2)
-     d7a:	0100                	addi	s0,sp,128
+     d7a:	0100                	.2byte	0x100
      d7c:	3c090503          	lb	a0,960(s2)
-     d80:	0100                	addi	s0,sp,128
+     d80:	0100                	.2byte	0x100
      d82:	38090503          	lb	a0,896(s2)
-     d86:	0100                	addi	s0,sp,128
+     d86:	0100                	.2byte	0x100
      d88:	44090503          	lb	a0,1088(s2)
-     d8c:	0100                	addi	s0,sp,128
+     d8c:	0100                	.2byte	0x100
      d8e:	2c090503          	lb	a0,704(s2)
-     d92:	0101                	addi	sp,sp,0
+     d92:	0101                	.2byte	0x101
      d94:	40090503          	lb	a0,1024(s2)
-     d98:	0100                	addi	s0,sp,128
+     d98:	0100                	.2byte	0x100
      d9a:	2c090503          	lb	a0,704(s2)
-     d9e:	0104                	addi	s1,sp,128
+     d9e:	0104                	.2byte	0x104
      da0:	6c090503          	lb	a0,1728(s2)
-     da4:	0100                	addi	s0,sp,128
+     da4:	0100                	.2byte	0x100
      da6:	44090503          	lb	a0,1088(s2)
-     daa:	0100                	addi	s0,sp,128
+     daa:	0100                	.2byte	0x100
      dac:	28090503          	lb	a0,640(s2)
-     db0:	0101                	addi	sp,sp,0
+     db0:	0101                	.2byte	0x101
      db2:	34090503          	lb	a0,832(s2)
-     db6:	0100                	addi	s0,sp,128
+     db6:	0100                	.2byte	0x100
      db8:	30090503          	lb	a0,768(s2)
-     dbc:	0100                	addi	s0,sp,128
+     dbc:	0100                	.2byte	0x100
      dbe:	28090503          	lb	a0,640(s2)
-     dc2:	0102                	c.slli64	sp
+     dc2:	0102                	.2byte	0x102
      dc4:	34090503          	lb	a0,832(s2)
-     dc8:	0100                	addi	s0,sp,128
+     dc8:	0100                	.2byte	0x100
      dca:	30090503          	lb	a0,768(s2)
-     dce:	0100                	addi	s0,sp,128
+     dce:	0100                	.2byte	0x100
      dd0:	34090503          	lb	a0,832(s2)
-     dd4:	0100                	addi	s0,sp,128
+     dd4:	0100                	.2byte	0x100
      dd6:	28090503          	lb	a0,640(s2)
-     dda:	0101                	addi	sp,sp,0
+     dda:	0101                	.2byte	0x101
      ddc:	34090503          	lb	a0,832(s2)
-     de0:	0100                	addi	s0,sp,128
+     de0:	0100                	.2byte	0x100
      de2:	d4090503          	lb	a0,-704(s2)
-     de6:	010a                	slli	sp,sp,0x2
+     de6:	010a                	.2byte	0x10a
      de8:	34090503          	lb	a0,832(s2)
-     dec:	0100                	addi	s0,sp,128
+     dec:	0100                	.2byte	0x100
      dee:	30090503          	lb	a0,768(s2)
-     df2:	0100                	addi	s0,sp,128
+     df2:	0100                	.2byte	0x100
      df4:	28090503          	lb	a0,640(s2)
-     df8:	0102                	c.slli64	sp
+     df8:	0102                	.2byte	0x102
      dfa:	34090503          	lb	a0,832(s2)
-     dfe:	0100                	addi	s0,sp,128
+     dfe:	0100                	.2byte	0x100
      e00:	3c090503          	lb	a0,960(s2)
-     e04:	0100                	addi	s0,sp,128
+     e04:	0100                	.2byte	0x100
      e06:	40090503          	lb	a0,1024(s2)
-     e0a:	0100                	addi	s0,sp,128
+     e0a:	0100                	.2byte	0x100
      e0c:	34090503          	lb	a0,832(s2)
-     e10:	0100                	addi	s0,sp,128
+     e10:	0100                	.2byte	0x100
      e12:	40090503          	lb	a0,1024(s2)
-     e16:	0100                	addi	s0,sp,128
+     e16:	0100                	.2byte	0x100
      e18:	34090503          	lb	a0,832(s2)
-     e1c:	0100                	addi	s0,sp,128
+     e1c:	0100                	.2byte	0x100
      e1e:	34090503          	lb	a0,832(s2)
-     e22:	0100                	addi	s0,sp,128
+     e22:	0100                	.2byte	0x100
      e24:	34090503          	lb	a0,832(s2)
-     e28:	0100                	addi	s0,sp,128
+     e28:	0100                	.2byte	0x100
      e2a:	30090503          	lb	a0,768(s2)
-     e2e:	0100                	addi	s0,sp,128
+     e2e:	0100                	.2byte	0x100
      e30:	34090503          	lb	a0,832(s2)
-     e34:	0100                	addi	s0,sp,128
+     e34:	0100                	.2byte	0x100
      e36:	34090503          	lb	a0,832(s2)
-     e3a:	0100                	addi	s0,sp,128
+     e3a:	0100                	.2byte	0x100
      e3c:	38090503          	lb	a0,896(s2)
-     e40:	0100                	addi	s0,sp,128
+     e40:	0100                	.2byte	0x100
      e42:	24090503          	lb	a0,576(s2)
-     e46:	0101                	addi	sp,sp,0
+     e46:	0101                	.2byte	0x101
      e48:	34090503          	lb	a0,832(s2)
-     e4c:	0100                	addi	s0,sp,128
+     e4c:	0100                	.2byte	0x100
      e4e:	48090503          	lb	a0,1152(s2)
-     e52:	0100                	addi	s0,sp,128
+     e52:	0100                	.2byte	0x100
      e54:	38090503          	lb	a0,896(s2)
-     e58:	0100                	addi	s0,sp,128
+     e58:	0100                	.2byte	0x100
      e5a:	38090503          	lb	a0,896(s2)
-     e5e:	0100                	addi	s0,sp,128
+     e5e:	0100                	.2byte	0x100
      e60:	38090503          	lb	a0,896(s2)
-     e64:	0100                	addi	s0,sp,128
+     e64:	0100                	.2byte	0x100
      e66:	2c090503          	lb	a0,704(s2)
-     e6a:	0108                	addi	a0,sp,128
+     e6a:	0108                	.2byte	0x108
      e6c:	3c090503          	lb	a0,960(s2)
-     e70:	0100                	addi	s0,sp,128
+     e70:	0100                	.2byte	0x100
      e72:	6c090503          	lb	a0,1728(s2)
-     e76:	0100                	addi	s0,sp,128
+     e76:	0100                	.2byte	0x100
      e78:	30090503          	lb	a0,768(s2)
-     e7c:	0108                	addi	a0,sp,128
+     e7c:	0108                	.2byte	0x108
      e7e:	28090503          	lb	a0,640(s2)
-     e82:	0102                	c.slli64	sp
+     e82:	0102                	.2byte	0x102
      e84:	38090503          	lb	a0,896(s2)
-     e88:	0100                	addi	s0,sp,128
+     e88:	0100                	.2byte	0x100
      e8a:	38090503          	lb	a0,896(s2)
-     e8e:	0100                	addi	s0,sp,128
+     e8e:	0100                	.2byte	0x100
      e90:	2c090503          	lb	a0,704(s2)
-     e94:	0104                	addi	s1,sp,128
+     e94:	0104                	.2byte	0x104
      e96:	30090503          	lb	a0,768(s2)
-     e9a:	0108                	addi	a0,sp,128
+     e9a:	0108                	.2byte	0x108
      e9c:	28090503          	lb	a0,640(s2)
-     ea0:	0104                	addi	s1,sp,128
+     ea0:	0104                	.2byte	0x104
      ea2:	38090503          	lb	a0,896(s2)
-     ea6:	0100                	addi	s0,sp,128
+     ea6:	0100                	.2byte	0x100
      ea8:	4c090503          	lb	a0,1216(s2)
-     eac:	0100                	addi	s0,sp,128
+     eac:	0100                	.2byte	0x100
      eae:	2c090503          	lb	a0,704(s2)
-     eb2:	0102                	c.slli64	sp
+     eb2:	0102                	.2byte	0x102
      eb4:	44090503          	lb	a0,1088(s2)
-     eb8:	0100                	addi	s0,sp,128
+     eb8:	0100                	.2byte	0x100
      eba:	2c090503          	lb	a0,704(s2)
-     ebe:	0104                	addi	s1,sp,128
+     ebe:	0104                	.2byte	0x104
      ec0:	ac090503          	lb	a0,-1344(s2)
-     ec4:	0100                	addi	s0,sp,128
+     ec4:	0100                	.2byte	0x100
      ec6:	40090503          	lb	a0,1024(s2)
-     eca:	0100                	addi	s0,sp,128
+     eca:	0100                	.2byte	0x100
      ecc:	38090503          	lb	a0,896(s2)
-     ed0:	0100                	addi	s0,sp,128
+     ed0:	0100                	.2byte	0x100
      ed2:	38090503          	lb	a0,896(s2)
-     ed6:	0100                	addi	s0,sp,128
+     ed6:	0100                	.2byte	0x100
      ed8:	38090503          	lb	a0,896(s2)
-     edc:	0100                	addi	s0,sp,128
+     edc:	0100                	.2byte	0x100
      ede:	34090503          	lb	a0,832(s2)
-     ee2:	0100                	addi	s0,sp,128
+     ee2:	0100                	.2byte	0x100
      ee4:	40090503          	lb	a0,1024(s2)
-     ee8:	0100                	addi	s0,sp,128
+     ee8:	0100                	.2byte	0x100
      eea:	34090503          	lb	a0,832(s2)
-     eee:	0100                	addi	s0,sp,128
+     eee:	0100                	.2byte	0x100
      ef0:	38090503          	lb	a0,896(s2)
-     ef4:	0100                	addi	s0,sp,128
+     ef4:	0100                	.2byte	0x100
      ef6:	44090503          	lb	a0,1088(s2)
-     efa:	0100                	addi	s0,sp,128
+     efa:	0100                	.2byte	0x100
      efc:	34090503          	lb	a0,832(s2)
-     f00:	0100                	addi	s0,sp,128
+     f00:	0100                	.2byte	0x100
      f02:	30090503          	lb	a0,768(s2)
-     f06:	0108                	addi	a0,sp,128
+     f06:	0108                	.2byte	0x108
      f08:	6c090503          	lb	a0,1728(s2)
-     f0c:	0100                	addi	s0,sp,128
+     f0c:	0100                	.2byte	0x100
      f0e:	2c090503          	lb	a0,704(s2)
-     f12:	0102                	c.slli64	sp
+     f12:	0102                	.2byte	0x102
      f14:	34090503          	lb	a0,832(s2)
-     f18:	0100                	addi	s0,sp,128
+     f18:	0100                	.2byte	0x100
      f1a:	38090503          	lb	a0,896(s2)
-     f1e:	0100                	addi	s0,sp,128
+     f1e:	0100                	.2byte	0x100
      f20:	68090503          	lb	a0,1664(s2)
-     f24:	0100                	addi	s0,sp,128
+     f24:	0100                	.2byte	0x100
      f26:	38090503          	lb	a0,896(s2)
-     f2a:	0100                	addi	s0,sp,128
+     f2a:	0100                	.2byte	0x100
      f2c:	6c090503          	lb	a0,1728(s2)
-     f30:	0100                	addi	s0,sp,128
+     f30:	0100                	.2byte	0x100
      f32:	28090503          	lb	a0,640(s2)
-     f36:	0102                	c.slli64	sp
+     f36:	0102                	.2byte	0x102
      f38:	30090503          	lb	a0,768(s2)
-     f3c:	0108                	addi	a0,sp,128
+     f3c:	0108                	.2byte	0x108
      f3e:	3c090503          	lb	a0,960(s2)
-     f42:	0100                	addi	s0,sp,128
+     f42:	0100                	.2byte	0x100
      f44:	38090503          	lb	a0,896(s2)
-     f48:	0100                	addi	s0,sp,128
+     f48:	0100                	.2byte	0x100
      f4a:	2c090503          	lb	a0,704(s2)
-     f4e:	0104                	addi	s1,sp,128
+     f4e:	0104                	.2byte	0x104
      f50:	dc090503          	lb	a0,-576(s2)
-     f54:	010a                	slli	sp,sp,0x2
+     f54:	010a                	.2byte	0x10a
      f56:	38090503          	lb	a0,896(s2)
-     f5a:	0100                	addi	s0,sp,128
+     f5a:	0100                	.2byte	0x100
      f5c:	a8090503          	lb	a0,-1408(s2)
-     f60:	0100                	addi	s0,sp,128
+     f60:	0100                	.2byte	0x100
      f62:	40090503          	lb	a0,1024(s2)
-     f66:	0100                	addi	s0,sp,128
+     f66:	0100                	.2byte	0x100
      f68:	38090503          	lb	a0,896(s2)
-     f6c:	0100                	addi	s0,sp,128
+     f6c:	0100                	.2byte	0x100
      f6e:	6c090503          	lb	a0,1728(s2)
-     f72:	0100                	addi	s0,sp,128
+     f72:	0100                	.2byte	0x100
      f74:	34090503          	lb	a0,832(s2)
-     f78:	0100                	addi	s0,sp,128
+     f78:	0100                	.2byte	0x100
      f7a:	34090503          	lb	a0,832(s2)
-     f7e:	0100                	addi	s0,sp,128
+     f7e:	0100                	.2byte	0x100
      f80:	34090503          	lb	a0,832(s2)
-     f84:	0100                	addi	s0,sp,128
+     f84:	0100                	.2byte	0x100
      f86:	38090503          	lb	a0,896(s2)
-     f8a:	0100                	addi	s0,sp,128
+     f8a:	0100                	.2byte	0x100
      f8c:	38090503          	lb	a0,896(s2)
-     f90:	0100                	addi	s0,sp,128
+     f90:	0100                	.2byte	0x100
      f92:	a8090503          	lb	a0,-1408(s2)
-     f96:	0100                	addi	s0,sp,128
+     f96:	0100                	.2byte	0x100
      f98:	38090503          	lb	a0,896(s2)
-     f9c:	0100                	addi	s0,sp,128
+     f9c:	0100                	.2byte	0x100
      f9e:	40090503          	lb	a0,1024(s2)
-     fa2:	0100                	addi	s0,sp,128
+     fa2:	0100                	.2byte	0x100
      fa4:	38090503          	lb	a0,896(s2)
-     fa8:	0100                	addi	s0,sp,128
+     fa8:	0100                	.2byte	0x100
      faa:	34090503          	lb	a0,832(s2)
-     fae:	0100                	addi	s0,sp,128
+     fae:	0100                	.2byte	0x100
      fb0:	40090503          	lb	a0,1024(s2)
-     fb4:	0100                	addi	s0,sp,128
+     fb4:	0100                	.2byte	0x100
      fb6:	34090503          	lb	a0,832(s2)
-     fba:	0100                	addi	s0,sp,128
+     fba:	0100                	.2byte	0x100
      fbc:	6c090503          	lb	a0,1728(s2)
-     fc0:	0100                	addi	s0,sp,128
+     fc0:	0100                	.2byte	0x100
      fc2:	38090503          	lb	a0,896(s2)
-     fc6:	0100                	addi	s0,sp,128
+     fc6:	0100                	.2byte	0x100
      fc8:	38090503          	lb	a0,896(s2)
-     fcc:	0100                	addi	s0,sp,128
+     fcc:	0100                	.2byte	0x100
      fce:	38090503          	lb	a0,896(s2)
-     fd2:	0100                	addi	s0,sp,128
+     fd2:	0100                	.2byte	0x100
      fd4:	30090503          	lb	a0,768(s2)
-     fd8:	0108                	addi	a0,sp,128
+     fd8:	0108                	.2byte	0x108
      fda:	30090503          	lb	a0,768(s2)
-     fde:	0108                	addi	a0,sp,128
+     fde:	0108                	.2byte	0x108
      fe0:	4c090503          	lb	a0,1216(s2)
-     fe4:	0100                	addi	s0,sp,128
+     fe4:	0100                	.2byte	0x100
      fe6:	4c090503          	lb	a0,1216(s2)
-     fea:	0100                	addi	s0,sp,128
+     fea:	0100                	.2byte	0x100
      fec:	38090503          	lb	a0,896(s2)
-     ff0:	0100                	addi	s0,sp,128
+     ff0:	0100                	.2byte	0x100
      ff2:	34090503          	lb	a0,832(s2)
-     ff6:	0100                	addi	s0,sp,128
+     ff6:	0100                	.2byte	0x100
      ff8:	38090503          	lb	a0,896(s2)
-     ffc:	0100                	addi	s0,sp,128
+     ffc:	0100                	.2byte	0x100
      ffe:	6c090503          	lb	a0,1728(s2)
-    1002:	0100                	addi	s0,sp,128
+    1002:	0100                	.2byte	0x100
     1004:	ac090503          	lb	a0,-1344(s2)
-    1008:	0100                	addi	s0,sp,128
+    1008:	0100                	.2byte	0x100
     100a:	34090503          	lb	a0,832(s2)
-    100e:	0100                	addi	s0,sp,128
+    100e:	0100                	.2byte	0x100
     1010:	3c090503          	lb	a0,960(s2)
-    1014:	0100                	addi	s0,sp,128
+    1014:	0100                	.2byte	0x100
     1016:	30090503          	lb	a0,768(s2)
-    101a:	0100                	addi	s0,sp,128
+    101a:	0100                	.2byte	0x100
     101c:	40090503          	lb	a0,1024(s2)
-    1020:	0100                	addi	s0,sp,128
+    1020:	0100                	.2byte	0x100
     1022:	48090503          	lb	a0,1152(s2)
-    1026:	0100                	addi	s0,sp,128
+    1026:	0100                	.2byte	0x100
     1028:	64090503          	lb	a0,1600(s2)
-    102c:	0100                	addi	s0,sp,128
+    102c:	0100                	.2byte	0x100
     102e:	34090503          	lb	a0,832(s2)
-    1032:	0100                	addi	s0,sp,128
+    1032:	0100                	.2byte	0x100
     1034:	34090503          	lb	a0,832(s2)
-    1038:	0100                	addi	s0,sp,128
+    1038:	0100                	.2byte	0x100
     103a:	28090503          	lb	a0,640(s2)
-    103e:	0101                	addi	sp,sp,0
+    103e:	0101                	.2byte	0x101
     1040:	d4090503          	lb	a0,-704(s2)
-    1044:	010a                	slli	sp,sp,0x2
+    1044:	010a                	.2byte	0x10a
     1046:	34090503          	lb	a0,832(s2)
-    104a:	0100                	addi	s0,sp,128
+    104a:	0100                	.2byte	0x100
     104c:	24090503          	lb	a0,576(s2)
-    1050:	0101                	addi	sp,sp,0
+    1050:	0101                	.2byte	0x101
     1052:	34090503          	lb	a0,832(s2)
-    1056:	0100                	addi	s0,sp,128
+    1056:	0100                	.2byte	0x100
     1058:	2c090503          	lb	a0,704(s2)
-    105c:	0108                	addi	a0,sp,128
+    105c:	0108                	.2byte	0x108
     105e:	a4090503          	lb	a0,-1472(s2)
-    1062:	0100                	addi	s0,sp,128
+    1062:	0100                	.2byte	0x100
     1064:	28090503          	lb	a0,640(s2)
-    1068:	0104                	addi	s1,sp,128
+    1068:	0104                	.2byte	0x104
     106a:	28090503          	lb	a0,640(s2)
-    106e:	0101                	addi	sp,sp,0
+    106e:	0101                	.2byte	0x101
     1070:	28090503          	lb	a0,640(s2)
-    1074:	0102                	c.slli64	sp
+    1074:	0102                	.2byte	0x102
     1076:	3c090503          	lb	a0,960(s2)
-    107a:	0100                	addi	s0,sp,128
+    107a:	0100                	.2byte	0x100
     107c:	a8090503          	lb	a0,-1408(s2)
-    1080:	0100                	addi	s0,sp,128
+    1080:	0100                	.2byte	0x100
     1082:	34090503          	lb	a0,832(s2)
-    1086:	0100                	addi	s0,sp,128
+    1086:	0100                	.2byte	0x100
     1088:	44090503          	lb	a0,1088(s2)
-    108c:	0100                	addi	s0,sp,128
+    108c:	0100                	.2byte	0x100
     108e:	34090503          	lb	a0,832(s2)
-    1092:	0100                	addi	s0,sp,128
+    1092:	0100                	.2byte	0x100
     1094:	34090503          	lb	a0,832(s2)
-    1098:	0100                	addi	s0,sp,128
+    1098:	0100                	.2byte	0x100
     109a:	34090503          	lb	a0,832(s2)
-    109e:	0100                	addi	s0,sp,128
+    109e:	0100                	.2byte	0x100
     10a0:	30090503          	lb	a0,768(s2)
-    10a4:	0100                	addi	s0,sp,128
+    10a4:	0100                	.2byte	0x100
     10a6:	30090503          	lb	a0,768(s2)
-    10aa:	0100                	addi	s0,sp,128
+    10aa:	0100                	.2byte	0x100
     10ac:	44090503          	lb	a0,1088(s2)
-    10b0:	0100                	addi	s0,sp,128
+    10b0:	0100                	.2byte	0x100
     10b2:	28090503          	lb	a0,640(s2)
-    10b6:	0101                	addi	sp,sp,0
+    10b6:	0101                	.2byte	0x101
     10b8:	24090503          	lb	a0,576(s2)
-    10bc:	0104                	addi	s1,sp,128
+    10bc:	0104                	.2byte	0x104
     10be:	38090503          	lb	a0,896(s2)
-    10c2:	0100                	addi	s0,sp,128
+    10c2:	0100                	.2byte	0x100
     10c4:	d8090503          	lb	a0,-640(s2)
-    10c8:	010a                	slli	sp,sp,0x2
+    10c8:	010a                	.2byte	0x10a
     10ca:	68090503          	lb	a0,1664(s2)
-    10ce:	0100                	addi	s0,sp,128
+    10ce:	0100                	.2byte	0x100
     10d0:	30090503          	lb	a0,768(s2)
-    10d4:	0100                	addi	s0,sp,128
+    10d4:	0100                	.2byte	0x100
     10d6:	38090503          	lb	a0,896(s2)
-    10da:	0100                	addi	s0,sp,128
+    10da:	0100                	.2byte	0x100
     10dc:	44090503          	lb	a0,1088(s2)
-    10e0:	0100                	addi	s0,sp,128
+    10e0:	0100                	.2byte	0x100
     10e2:	38090503          	lb	a0,896(s2)
-    10e6:	0100                	addi	s0,sp,128
+    10e6:	0100                	.2byte	0x100
     10e8:	34090503          	lb	a0,832(s2)
-    10ec:	0100                	addi	s0,sp,128
+    10ec:	0100                	.2byte	0x100
     10ee:	30090503          	lb	a0,768(s2)
-    10f2:	0100                	addi	s0,sp,128
+    10f2:	0100                	.2byte	0x100
     10f4:	34090503          	lb	a0,832(s2)
-    10f8:	0100                	addi	s0,sp,128
+    10f8:	0100                	.2byte	0x100
     10fa:	a8090503          	lb	a0,-1408(s2)
-    10fe:	0100                	addi	s0,sp,128
+    10fe:	0100                	.2byte	0x100
     1100:	34090503          	lb	a0,832(s2)
-    1104:	0100                	addi	s0,sp,128
+    1104:	0100                	.2byte	0x100
     1106:	28090503          	lb	a0,640(s2)
-    110a:	0101                	addi	sp,sp,0
+    110a:	0101                	.2byte	0x101
     110c:	d8090503          	lb	a0,-640(s2)
-    1110:	010a                	slli	sp,sp,0x2
+    1110:	010a                	.2byte	0x10a
     1112:	34090503          	lb	a0,832(s2)
-    1116:	0100                	addi	s0,sp,128
+    1116:	0100                	.2byte	0x100
     1118:	34090503          	lb	a0,832(s2)
-    111c:	0100                	addi	s0,sp,128
+    111c:	0100                	.2byte	0x100
     111e:	34090503          	lb	a0,832(s2)
-    1122:	0100                	addi	s0,sp,128
+    1122:	0100                	.2byte	0x100
     1124:	34090503          	lb	a0,832(s2)
-    1128:	0100                	addi	s0,sp,128
+    1128:	0100                	.2byte	0x100
     112a:	38090503          	lb	a0,896(s2)
-    112e:	0100                	addi	s0,sp,128
+    112e:	0100                	.2byte	0x100
     1130:	28090503          	lb	a0,640(s2)
-    1134:	0108                	addi	a0,sp,128
+    1134:	0108                	.2byte	0x108
     1136:	30090503          	lb	a0,768(s2)
-    113a:	0100                	addi	s0,sp,128
+    113a:	0100                	.2byte	0x100
     113c:	28090503          	lb	a0,640(s2)
-    1140:	0104                	addi	s1,sp,128
+    1140:	0104                	.2byte	0x104
     1142:	38090503          	lb	a0,896(s2)
-    1146:	0100                	addi	s0,sp,128
+    1146:	0100                	.2byte	0x100
     1148:	44090503          	lb	a0,1088(s2)
-    114c:	0100                	addi	s0,sp,128
+    114c:	0100                	.2byte	0x100
     114e:	38090503          	lb	a0,896(s2)
-    1152:	0100                	addi	s0,sp,128
+    1152:	0100                	.2byte	0x100
     1154:	30090503          	lb	a0,768(s2)
-    1158:	0100                	addi	s0,sp,128
+    1158:	0100                	.2byte	0x100
     115a:	30090503          	lb	a0,768(s2)
-    115e:	0108                	addi	a0,sp,128
-    1160:	3409                	jal	b62 <offset+0x85a>
-    1162:	0000                	unimp
-    1164:	0101                	addi	sp,sp,0
+    115e:	0108                	.2byte	0x108
+    1160:	3409                	.2byte	0x3409
+    1162:	0000                	.2byte	0x0
+    1164:	0101                	.2byte	0x101
 
 Disassembly of section .debug_line_str:
 
 00000000 <.debug_line_str>:
-   0:	6d6f682f          	0x6d6f682f
-   4:	2f65                	jal	7bc <offset+0x4b4>
-   6:	6f6d                	lui	t5,0x1b
-   8:	6d2f6e6f          	jal	t3,f66da <_end+0x2b96a>
-   c:	5f6e6f6f          	jal	t5,e6602 <_end+0x1b892>
-  10:	6576                	flw	fa0,92(sp)
-  12:	6972                	flw	fs2,28(sp)
-  14:	5f66                	lw	t5,120(sp)
-  16:	7335                	lui	t1,0xfffed
-  18:	7369722f          	0x7369722f
-  1c:	5f666f63          	bltu	a2,s6,61a <offset+0x312>
-  20:	6b726f77          	0x6b726f77
-  24:	6372732f          	0x6372732f
-  28:	6567622f          	0x6567622f
-  2c:	2d75                	jal	6e8 <offset+0x3e0>
-  2e:	3130                	fld	fa2,96(a0)
-  30:	532e                	lw	t1,232(sp)
-  32:	7475642f          	0x7475642f
-  36:	2f00                	fld	fs0,24(a4)
-  38:	6f68                	flw	fa0,92(a4)
-  3a:	656d                	lui	a0,0x1b
-  3c:	6f6f6d2f          	0x6f6f6d2f
-  40:	2f6e                	fld	ft10,216(sp)
-  42:	6f6d                	lui	t5,0x1b
-  44:	765f6e6f          	jal	t3,f6fa8 <_end+0x2c238>
-  48:	7265                	lui	tp,0xffff9
-  4a:	6669                	lui	a2,0x1a
-  4c:	355f 2f73 6972      	0x69722f73355f
-  52:	2d766373          	csrrsi	t1,0x2d7,12
-  56:	7261                	lui	tp,0xffff8
-  58:	742d6863          	bltu	s10,sp,7a8 <offset+0x4a0>
-  5c:	7365                	lui	t1,0xffff9
-  5e:	2f74                	fld	fa3,216(a4)
-  60:	6972                	flw	fs2,28(sp)
-  62:	2d766373          	csrrsi	t1,0x2d7,12
-  66:	6574                	flw	fa3,76(a0)
-  68:	732d7473          	csrrci	s0,0x732,26
-  6c:	6975                	lui	s2,0x1d
-  6e:	6574                	flw	fa3,76(a0)
-  70:	3376722f          	0x3376722f
-  74:	6932                	flw	fs2,12(sp)
-  76:	6d5f 492f 732f      	0x732f492f6d5f
-  7c:	6372                	flw	ft6,28(sp)
-  7e:	6200                	flw	fs0,0(a2)
-  80:	2d756567          	0x2d756567
-  84:	3130                	fld	fa2,96(a0)
-  86:	532e                	lw	t1,232(sp)
+   0:	6d6f682f          	.4byte	0x6d6f682f
+   4:	2f65                	.2byte	0x2f65
+   6:	6578                	.2byte	0x6578
+   8:	6c2d                	.2byte	0x6c2d
+   a:	7470                	.2byte	0x7470
+   c:	372d                	.2byte	0x372d
+   e:	2f31                	.2byte	0x2f31
+  10:	6f44                	.2byte	0x6f44
+  12:	656d7563          	bgeu	s10,s6,65c <offset+0x354>
+  16:	746e                	.2byte	0x746e
+  18:	65542f73          	csrrs	t5,0x655,s0
+  1c:	722f7473          	csrrci	s0,0x722,30
+  20:	7369                	.2byte	0x7369
+  22:	5f666f63          	bltu	a2,s6,620 <offset+0x318>
+  26:	6b726f77          	.4byte	0x6b726f77
+  2a:	6372732f          	.4byte	0x6372732f
+  2e:	6567622f          	.4byte	0x6567622f
+  32:	2d75                	.2byte	0x2d75
+  34:	3130                	.2byte	0x3130
+  36:	532e                	.2byte	0x532e
+  38:	7475642f          	.4byte	0x7475642f
+  3c:	2f00                	.2byte	0x2f00
+  3e:	6f68                	.2byte	0x6f68
+  40:	656d                	.2byte	0x656d
+  42:	2d65782f          	.4byte	0x2d65782f
+  46:	706c                	.2byte	0x706c
+  48:	2d74                	.2byte	0x2d74
+  4a:	442f3137          	lui	sp,0x442f3
+  4e:	6d75636f          	jal	t1,56f24 <offset+0x56c1c>
+  52:	6e65                	.2byte	0x6e65
+  54:	7374                	.2byte	0x7374
+  56:	7365542f          	.4byte	0x7365542f
+  5a:	2f74                	.2byte	0x2f74
+  5c:	6972                	.2byte	0x6972
+  5e:	2d766373          	csrrsi	t1,0x2d7,12
+  62:	7261                	.2byte	0x7261
+  64:	742d6863          	bltu	s10,sp,7b4 <offset+0x4ac>
+  68:	7365                	.2byte	0x7365
+  6a:	2f74                	.2byte	0x2f74
+  6c:	6972                	.2byte	0x6972
+  6e:	2d766373          	csrrsi	t1,0x2d7,12
+  72:	6574                	.2byte	0x6574
+  74:	732d7473          	csrrci	s0,mhpmevent18h,26
+  78:	6975                	.2byte	0x6975
+  7a:	6574                	.2byte	0x6574
+  7c:	3376722f          	.4byte	0x3376722f
+  80:	6932                	.2byte	0x6932
+  82:	6d5f 492f 732f      	.byte	0x5f, 0x6d, 0x2f, 0x49, 0x2f, 0x73
+  88:	6372                	.2byte	0x6372
+  8a:	6200                	.2byte	0x6200
+  8c:	2d756567          	.4byte	0x2d756567
+  90:	3130                	.2byte	0x3130
+  92:	532e                	.2byte	0x532e
 	...
 
 Disassembly of section .debug_info:
 
 00000000 <.debug_info>:
-   0:	0022                	c.slli	zero,0x8
-   2:	0000                	unimp
-   4:	0005                	c.nop	1
-   6:	0401                	addi	s0,s0,0
-   8:	0000                	unimp
-   a:	0000                	unimp
-   c:	0001                	nop
-   e:	0000                	unimp
-  10:	0000                	unimp
-  12:	0800                	addi	s0,sp,16
-  14:	f400                	fsw	fs0,40(s0)
-  16:	1294                	addi	a3,sp,352
-  18:	0000                	unimp
-  1a:	0000                	unimp
-  1c:	0052                	c.slli	zero,0x14
-  1e:	0000                	unimp
-  20:	0089                	addi	ra,ra,2
-  22:	0000                	unimp
-  24:	8001                	c.srli64	s0
+   0:	0022                	.2byte	0x22
+   2:	0000                	.2byte	0x0
+   4:	0005                	.2byte	0x5
+   6:	0401                	.2byte	0x401
+   8:	0000                	.2byte	0x0
+   a:	0000                	.2byte	0x0
+   c:	0001                	.2byte	0x1
+   e:	0000                	.2byte	0x0
+  10:	0000                	.2byte	0x0
+  12:	0800                	.2byte	0x800
+  14:	f400                	.2byte	0xf400
+  16:	1294                	.2byte	0x1294
+  18:	0000                	.2byte	0x0
+  1a:	0000                	.2byte	0x0
+  1c:	0058                	.2byte	0x58
+  1e:	0000                	.2byte	0x0
+  20:	0095                	.2byte	0x95
+  22:	0000                	.2byte	0x0
+  24:	8001                	.2byte	0x8001
 
 Disassembly of section .debug_abbrev:
 
 00000000 <.debug_abbrev>:
-   0:	1101                	addi	sp,sp,-32
-   2:	1000                	addi	s0,sp,32
+   0:	1101                	.2byte	0x1101
+   2:	1000                	.2byte	0x1000
    4:	12011117          	auipc	sp,0x12011
-   8:	1b0e030f          	0x1b0e030f
-   c:	250e                	fld	fa0,192(sp)
-   e:	130e                	slli	t1,t1,0x23
-  10:	0005                	c.nop	1
+   8:	1b0e030f          	.4byte	0x1b0e030f
+   c:	250e                	.2byte	0x250e
+   e:	130e                	.2byte	0x130e
+  10:	0005                	.2byte	0x5
 	...
 
 Disassembly of section .debug_aranges:
 
 00000000 <.debug_aranges>:
-   0:	001c                	0x1c
-   2:	0000                	unimp
-   4:	0002                	c.slli64	zero
-   6:	0000                	unimp
-   8:	0000                	unimp
-   a:	0004                	0x4
-   c:	0000                	unimp
-   e:	0000                	unimp
-  10:	0000                	unimp
-  12:	0008                	0x8
-  14:	8a54                	0x8a54
-  16:	0004                	0x4
+   0:	001c                	.2byte	0x1c
+   2:	0000                	.2byte	0x0
+   4:	0002                	.2byte	0x2
+   6:	0000                	.2byte	0x0
+   8:	0000                	.2byte	0x0
+   a:	0004                	.2byte	0x4
+   c:	0000                	.2byte	0x0
+   e:	0000                	.2byte	0x0
+  10:	0000                	.2byte	0x0
+  12:	0008                	.2byte	0x8
+  14:	8a54                	.2byte	0x8a54
+  16:	0004                	.2byte	0x4
 	...
 
 Disassembly of section .debug_str:
 
 00000000 <.debug_str>:
-   0:	6d6f682f          	0x6d6f682f
-   4:	2f65                	jal	7bc <offset+0x4b4>
-   6:	6f6d                	lui	t5,0x1b
-   8:	6d2f6e6f          	jal	t3,f66da <_end+0x2b96a>
-   c:	5f6e6f6f          	jal	t5,e6602 <_end+0x1b892>
-  10:	6576                	flw	fa0,92(sp)
-  12:	6972                	flw	fs2,28(sp)
-  14:	5f66                	lw	t5,120(sp)
-  16:	7335                	lui	t1,0xfffed
-  18:	7369722f          	0x7369722f
-  1c:	612d7663          	bgeu	s10,s2,628 <offset+0x320>
-  20:	6372                	flw	ft6,28(sp)
-  22:	2d68                	fld	fa0,216(a0)
-  24:	6574                	flw	fa3,76(a0)
-  26:	722f7473          	csrrci	s0,0x722,30
-  2a:	7369                	lui	t1,0xffffa
-  2c:	742d7663          	bgeu	s10,sp,778 <offset+0x470>
-  30:	7365                	lui	t1,0xffff9
-  32:	2d74                	fld	fa3,216(a0)
-  34:	74697573          	csrrci	a0,0x746,18
-  38:	2f65                	jal	7f0 <offset+0x4e8>
-  3a:	7672                	flw	fa2,60(sp)
-  3c:	5f693233          	0x5f693233
-  40:	2f6d                	jal	7fa <offset+0x4f2>
-  42:	2f49                	jal	7d4 <offset+0x4cc>
-  44:	2f637273          	csrrci	tp,0x2f6,6
-  48:	6762                	flw	fa4,24(sp)
-  4a:	7565                	lui	a0,0xffff9
-  4c:	302d                	jal	fffff876 <_end+0xfff34b06>
-  4e:	2e31                	jal	36a <offset+0x62>
-  50:	682f0053          	0x682f0053
-  54:	2f656d6f          	jal	s10,5634a <offset+0x56042>
-  58:	6f6d                	lui	t5,0x1b
-  5a:	6d2f6e6f          	jal	t3,f672c <_end+0x2b9bc>
-  5e:	5f6e6f6f          	jal	t5,e6654 <_end+0x1b8e4>
-  62:	6576                	flw	fa0,92(sp)
-  64:	6972                	flw	fs2,28(sp)
-  66:	5f66                	lw	t5,120(sp)
-  68:	7335                	lui	t1,0xfffed
-  6a:	7369722f          	0x7369722f
-  6e:	5f666f63          	bltu	a2,s6,66c <offset+0x364>
-  72:	6b726f77          	0x6b726f77
-  76:	6372732f          	0x6372732f
-  7a:	6567622f          	0x6567622f
-  7e:	2d75                	jal	73a <offset+0x432>
-  80:	3130                	fld	fa2,96(a0)
-  82:	532e                	lw	t1,232(sp)
-  84:	7475642f          	0x7475642f
-  88:	4700                	lw	s0,8(a4)
-  8a:	554e                	lw	a0,240(sp)
-  8c:	4120                	lw	s0,64(a0)
-  8e:	2e322053          	0x2e322053
-  92:	          	snez	s2,zero
+   0:	6d6f682f          	.4byte	0x6d6f682f
+   4:	2f65                	.2byte	0x2f65
+   6:	6578                	.2byte	0x6578
+   8:	6c2d                	.2byte	0x6c2d
+   a:	7470                	.2byte	0x7470
+   c:	372d                	.2byte	0x372d
+   e:	2f31                	.2byte	0x2f31
+  10:	6f44                	.2byte	0x6f44
+  12:	656d7563          	bgeu	s10,s6,65c <offset+0x354>
+  16:	746e                	.2byte	0x746e
+  18:	65542f73          	csrrs	t5,0x655,s0
+  1c:	722f7473          	csrrci	s0,0x722,30
+  20:	7369                	.2byte	0x7369
+  22:	612d7663          	bgeu	s10,s2,62e <offset+0x326>
+  26:	6372                	.2byte	0x6372
+  28:	2d68                	.2byte	0x2d68
+  2a:	6574                	.2byte	0x6574
+  2c:	722f7473          	csrrci	s0,0x722,30
+  30:	7369                	.2byte	0x7369
+  32:	742d7663          	bgeu	s10,sp,77e <offset+0x476>
+  36:	7365                	.2byte	0x7365
+  38:	2d74                	.2byte	0x2d74
+  3a:	74697573          	csrrci	a0,0x746,18
+  3e:	2f65                	.2byte	0x2f65
+  40:	7672                	.2byte	0x7672
+  42:	5f693233          	.4byte	0x5f693233
+  46:	2f6d                	.2byte	0x2f6d
+  48:	2f49                	.2byte	0x2f49
+  4a:	2f637273          	csrrci	tp,0x2f6,6
+  4e:	6762                	.2byte	0x6762
+  50:	7565                	.2byte	0x7565
+  52:	302d                	.2byte	0x302d
+  54:	2e31                	.2byte	0x2e31
+  56:	682f0053          	.4byte	0x682f0053
+  5a:	2f656d6f          	jal	s10,56350 <offset+0x56048>
+  5e:	6578                	.2byte	0x6578
+  60:	6c2d                	.2byte	0x6c2d
+  62:	7470                	.2byte	0x7470
+  64:	372d                	.2byte	0x372d
+  66:	2f31                	.2byte	0x2f31
+  68:	6f44                	.2byte	0x6f44
+  6a:	656d7563          	bgeu	s10,s6,6b4 <offset+0x3ac>
+  6e:	746e                	.2byte	0x746e
+  70:	65542f73          	csrrs	t5,0x655,s0
+  74:	722f7473          	csrrci	s0,0x722,30
+  78:	7369                	.2byte	0x7369
+  7a:	5f666f63          	bltu	a2,s6,678 <offset+0x370>
+  7e:	6b726f77          	.4byte	0x6b726f77
+  82:	6372732f          	.4byte	0x6372732f
+  86:	6567622f          	.4byte	0x6567622f
+  8a:	2d75                	.2byte	0x2d75
+  8c:	3130                	.2byte	0x3130
+  8e:	532e                	.2byte	0x532e
+  90:	7475642f          	.4byte	0x7475642f
+  94:	4700                	.2byte	0x4700
+  96:	554e                	.2byte	0x554e
+  98:	4120                	.2byte	0x4120
+  9a:	2e322053          	.4byte	0x2e322053
+  9e:	33 39 00            	Address 0x000000000000009e is out of bounds.
+

@@ -370,16 +370,16 @@ Disassembly of section .data:
 	...
 
 00082100 <begin_regstate>:
-   82100:	0080                	addi	s0,sp,64
+   82100:	0080                	.2byte	0x80
 	...
 
 00082200 <end_regstate>:
-   82200:	0004                	0x4
+   82200:	0004                	.2byte	0x4
 	...
 
 00082210 <begin_signature>:
-   82210:	a309                	j	82712 <_end+0x472>
-   82212:	6f5c                	flw	fa5,28(a4)
+   82210:	a309                	.2byte	0xa309
+   82212:	6f5c                	.2byte	0x6f5c
 
 00082214 <signature_x9_0>:
    82214:	deadbeef          	jal	t4,5d7fe <offset+0x5d7ce>
@@ -418,8 +418,8 @@ Disassembly of section .data:
    82290:	deadbeef          	jal	t4,5d87a <offset+0x5d84a>
 
 00082294 <sig_end_canary>:
-   82294:	a309                	j	82796 <_end+0x4f6>
-   82296:	6f5c                	flw	fa5,28(a4)
+   82294:	a309                	.2byte	0xa309
+   82296:	6f5c                	.2byte	0x6f5c
 
 00082298 <rvtest_sig_end>:
 	...
@@ -427,294 +427,307 @@ Disassembly of section .data:
 Disassembly of section .riscv.attributes:
 
 00000000 <.riscv.attributes>:
-   0:	1941                	addi	s2,s2,-16
-   2:	0000                	unimp
-   4:	7200                	flw	fs0,32(a2)
-   6:	7369                	lui	t1,0xffffa
+   0:	1941                	.2byte	0x1941
+   2:	0000                	.2byte	0x0
+   4:	7200                	.2byte	0x7200
+   6:	7369                	.2byte	0x7369
    8:	01007663          	bgeu	zero,a6,14 <offset-0x1c>
    c:	0000000f          	fence	unknown,unknown
-  10:	7205                	lui	tp,0xfffe1
-  12:	3376                	fld	ft6,376(sp)
-  14:	6932                	flw	fs2,12(sp)
-  16:	7032                	flw	ft0,44(sp)
-  18:	0030                	addi	a2,sp,8
+  10:	7205                	.2byte	0x7205
+  12:	3376                	.2byte	0x3376
+  14:	6932                	.2byte	0x6932
+  16:	7032                	.2byte	0x7032
+  18:	0030                	.2byte	0x30
 
 Disassembly of section .debug_line:
 
 00000000 <.debug_line>:
-   0:	0118                	addi	a4,sp,128
-   2:	0000                	unimp
-   4:	0005                	c.nop	1
-   6:	0004                	0x4
-   8:	002e                	c.slli	zero,0xb
-   a:	0000                	unimp
-   c:	0101                	addi	sp,sp,0
-   e:	fb01                	bnez	a4,ffffff1e <_end+0xfff7dc7e>
-  10:	0d0e                	slli	s10,s10,0x3
-  12:	0100                	addi	s0,sp,128
-  14:	0101                	addi	sp,sp,0
-  16:	0001                	nop
-  18:	0000                	unimp
-  1a:	0001                	nop
-  1c:	0100                	addi	s0,sp,128
-  1e:	0101                	addi	sp,sp,0
-  20:	021f 0000 0000      	0x21f
-  26:	003c                	addi	a5,sp,8
-  28:	0000                	unimp
-  2a:	0102                	c.slli64	sp
-  2c:	021f 020f 0084      	0x84020f021f
-  32:	0000                	unimp
-  34:	8401                	c.srai64	s0
-  36:	0000                	unimp
-  38:	0100                	addi	s0,sp,128
-  3a:	0500                	addi	s0,sp,640
-  3c:	0002                	c.slli64	zero
-  3e:	0800                	addi	s0,sp,16
-  40:	0300                	addi	s0,sp,384
-  42:	0119                	addi	sp,sp,6
+   0:	0118                	.2byte	0x118
+   2:	0000                	.2byte	0x0
+   4:	0005                	.2byte	0x5
+   6:	0004                	.2byte	0x4
+   8:	002e                	.2byte	0x2e
+   a:	0000                	.2byte	0x0
+   c:	0101                	.2byte	0x101
+   e:	fb01                	.2byte	0xfb01
+  10:	0d0e                	.2byte	0xd0e
+  12:	0100                	.2byte	0x100
+  14:	0101                	.2byte	0x101
+  16:	0001                	.2byte	0x1
+  18:	0000                	.2byte	0x0
+  1a:	0001                	.2byte	0x1
+  1c:	0100                	.2byte	0x100
+  1e:	0101                	.2byte	0x101
+  20:	021f 0000 0000      	.byte	0x1f, 0x02, 0x00, 0x00, 0x00, 0x00
+  26:	0042                	.2byte	0x42
+  28:	0000                	.2byte	0x0
+  2a:	0102                	.2byte	0x102
+  2c:	021f 020f 0090      	.byte	0x1f, 0x02, 0x0f, 0x02, 0x90, 0x00
+  32:	0000                	.2byte	0x0
+  34:	9001                	.2byte	0x9001
+  36:	0000                	.2byte	0x0
+  38:	0100                	.2byte	0x100
+  3a:	0500                	.2byte	0x500
+  3c:	0002                	.2byte	0x2
+  3e:	0800                	.2byte	0x800
+  40:	0300                	.2byte	0x300
+  42:	0119                	.2byte	0x119
   44:	f8090603          	lb	a2,-128(s2)
-  48:	0100                	addi	s0,sp,128
+  48:	0100                	.2byte	0x100
   4a:	08090503          	lb	a0,128(s2)
-  4e:	0100                	addi	s0,sp,128
+  4e:	0100                	.2byte	0x100
   50:	18090503          	lb	a0,384(s2)
-  54:	0100                	addi	s0,sp,128
+  54:	0100                	.2byte	0x100
   56:	18090503          	lb	a0,384(s2)
-  5a:	0100                	addi	s0,sp,128
+  5a:	0100                	.2byte	0x100
   5c:	18090503          	lb	a0,384(s2)
-  60:	0100                	addi	s0,sp,128
+  60:	0100                	.2byte	0x100
   62:	18090503          	lb	a0,384(s2)
-  66:	0100                	addi	s0,sp,128
+  66:	0100                	.2byte	0x100
   68:	18090503          	lb	a0,384(s2)
-  6c:	0100                	addi	s0,sp,128
+  6c:	0100                	.2byte	0x100
   6e:	18090503          	lb	a0,384(s2)
-  72:	0100                	addi	s0,sp,128
+  72:	0100                	.2byte	0x100
   74:	18090503          	lb	a0,384(s2)
-  78:	0100                	addi	s0,sp,128
+  78:	0100                	.2byte	0x100
   7a:	18090503          	lb	a0,384(s2)
-  7e:	0100                	addi	s0,sp,128
+  7e:	0100                	.2byte	0x100
   80:	18090503          	lb	a0,384(s2)
-  84:	0100                	addi	s0,sp,128
+  84:	0100                	.2byte	0x100
   86:	18090503          	lb	a0,384(s2)
-  8a:	0100                	addi	s0,sp,128
+  8a:	0100                	.2byte	0x100
   8c:	18090503          	lb	a0,384(s2)
-  90:	0100                	addi	s0,sp,128
+  90:	0100                	.2byte	0x100
   92:	18090503          	lb	a0,384(s2)
-  96:	0100                	addi	s0,sp,128
+  96:	0100                	.2byte	0x100
   98:	18090503          	lb	a0,384(s2)
-  9c:	0100                	addi	s0,sp,128
+  9c:	0100                	.2byte	0x100
   9e:	18090503          	lb	a0,384(s2)
-  a2:	0100                	addi	s0,sp,128
+  a2:	0100                	.2byte	0x100
   a4:	18090503          	lb	a0,384(s2)
-  a8:	0100                	addi	s0,sp,128
+  a8:	0100                	.2byte	0x100
   aa:	18090503          	lb	a0,384(s2)
-  ae:	0100                	addi	s0,sp,128
+  ae:	0100                	.2byte	0x100
   b0:	18090503          	lb	a0,384(s2)
-  b4:	0100                	addi	s0,sp,128
+  b4:	0100                	.2byte	0x100
   b6:	18090503          	lb	a0,384(s2)
-  ba:	0100                	addi	s0,sp,128
+  ba:	0100                	.2byte	0x100
   bc:	18090503          	lb	a0,384(s2)
-  c0:	0100                	addi	s0,sp,128
+  c0:	0100                	.2byte	0x100
   c2:	18090103          	lb	sp,384(s2)
-  c6:	0100                	addi	s0,sp,128
+  c6:	0100                	.2byte	0x100
   c8:	08090503          	lb	a0,128(s2)
-  cc:	0100                	addi	s0,sp,128
+  cc:	0100                	.2byte	0x100
   ce:	18090503          	lb	a0,384(s2)
-  d2:	0100                	addi	s0,sp,128
+  d2:	0100                	.2byte	0x100
   d4:	18090503          	lb	a0,384(s2)
-  d8:	0100                	addi	s0,sp,128
+  d8:	0100                	.2byte	0x100
   da:	18090503          	lb	a0,384(s2)
-  de:	0100                	addi	s0,sp,128
+  de:	0100                	.2byte	0x100
   e0:	18090503          	lb	a0,384(s2)
-  e4:	0100                	addi	s0,sp,128
+  e4:	0100                	.2byte	0x100
   e6:	18090503          	lb	a0,384(s2)
-  ea:	0100                	addi	s0,sp,128
+  ea:	0100                	.2byte	0x100
   ec:	18090503          	lb	a0,384(s2)
-  f0:	0100                	addi	s0,sp,128
+  f0:	0100                	.2byte	0x100
   f2:	18090503          	lb	a0,384(s2)
-  f6:	0100                	addi	s0,sp,128
+  f6:	0100                	.2byte	0x100
   f8:	18090503          	lb	a0,384(s2)
-  fc:	0100                	addi	s0,sp,128
+  fc:	0100                	.2byte	0x100
   fe:	18090503          	lb	a0,384(s2)
- 102:	0100                	addi	s0,sp,128
+ 102:	0100                	.2byte	0x100
  104:	18090503          	lb	a0,384(s2)
- 108:	0100                	addi	s0,sp,128
+ 108:	0100                	.2byte	0x100
  10a:	18090503          	lb	a0,384(s2)
- 10e:	0100                	addi	s0,sp,128
+ 10e:	0100                	.2byte	0x100
  110:	20090503          	lb	a0,512(s2)
- 114:	0100                	addi	s0,sp,128
- 116:	3409                	jal	fffffb18 <_end+0xfff7d878>
- 118:	0000                	unimp
- 11a:	0101                	addi	sp,sp,0
+ 114:	0100                	.2byte	0x100
+ 116:	3409                	.2byte	0x3409
+ 118:	0000                	.2byte	0x0
+ 11a:	0101                	.2byte	0x101
 
 Disassembly of section .debug_line_str:
 
 00000000 <.debug_line_str>:
-   0:	6d6f682f          	0x6d6f682f
-   4:	2f65                	jal	7bc <offset+0x78c>
-   6:	6f6d                	lui	t5,0x1b
-   8:	6d2f6e6f          	jal	t3,f66da <_end+0x7443a>
-   c:	5f6e6f6f          	jal	t5,e6602 <_end+0x64362>
-  10:	6576                	flw	fa0,92(sp)
-  12:	6972                	flw	fs2,28(sp)
-  14:	5f66                	lw	t5,120(sp)
-  16:	7335                	lui	t1,0xfffed
-  18:	7369722f          	0x7369722f
-  1c:	5f666f63          	bltu	a2,s6,61a <offset+0x5ea>
-  20:	6b726f77          	0x6b726f77
-  24:	6372732f          	0x6372732f
-  28:	75626c2f          	0x75626c2f
-  2c:	612d                	addi	sp,sp,224
-  2e:	696c                	flw	fa1,84(a0)
-  30:	302d6e67          	0x302d6e67
-  34:	2e31                	jal	350 <offset+0x320>
-  36:	75642f53          	0x75642f53
-  3a:	0074                	addi	a3,sp,12
-  3c:	6d6f682f          	0x6d6f682f
-  40:	2f65                	jal	7f8 <offset+0x7c8>
-  42:	6f6d                	lui	t5,0x1b
-  44:	6d2f6e6f          	jal	t3,f6716 <_end+0x74476>
-  48:	5f6e6f6f          	jal	t5,e663e <_end+0x6439e>
-  4c:	6576                	flw	fa0,92(sp)
-  4e:	6972                	flw	fs2,28(sp)
-  50:	5f66                	lw	t5,120(sp)
-  52:	7335                	lui	t1,0xfffed
-  54:	7369722f          	0x7369722f
-  58:	612d7663          	bgeu	s10,s2,664 <offset+0x634>
-  5c:	6372                	flw	ft6,28(sp)
-  5e:	2d68                	fld	fa0,216(a0)
-  60:	6574                	flw	fa3,76(a0)
-  62:	722f7473          	csrrci	s0,0x722,30
-  66:	7369                	lui	t1,0xffffa
-  68:	742d7663          	bgeu	s10,sp,7b4 <offset+0x784>
-  6c:	7365                	lui	t1,0xffff9
-  6e:	2d74                	fld	fa3,216(a0)
-  70:	74697573          	csrrci	a0,0x746,18
-  74:	2f65                	jal	82c <offset+0x7fc>
-  76:	7672                	flw	fa2,60(sp)
-  78:	5f693233          	0x5f693233
-  7c:	2f6d                	jal	836 <offset+0x806>
-  7e:	2f49                	jal	810 <offset+0x7e0>
-  80:	00637273          	csrrci	tp,0x6,6
-  84:	626c                	flw	fa1,68(a2)
-  86:	2d75                	jal	742 <offset+0x712>
-  88:	6c61                	lui	s8,0x18
-  8a:	6769                	lui	a4,0x1a
-  8c:	2d6e                	fld	fs10,216(sp)
-  8e:	3130                	fld	fa2,96(a0)
-  90:	532e                	lw	t1,232(sp)
+   0:	6d6f682f          	.4byte	0x6d6f682f
+   4:	2f65                	.2byte	0x2f65
+   6:	6578                	.2byte	0x6578
+   8:	6c2d                	.2byte	0x6c2d
+   a:	7470                	.2byte	0x7470
+   c:	372d                	.2byte	0x372d
+   e:	2f31                	.2byte	0x2f31
+  10:	6f44                	.2byte	0x6f44
+  12:	656d7563          	bgeu	s10,s6,65c <offset+0x62c>
+  16:	746e                	.2byte	0x746e
+  18:	65542f73          	csrrs	t5,0x655,s0
+  1c:	722f7473          	csrrci	s0,0x722,30
+  20:	7369                	.2byte	0x7369
+  22:	5f666f63          	bltu	a2,s6,620 <offset+0x5f0>
+  26:	6b726f77          	.4byte	0x6b726f77
+  2a:	6372732f          	.4byte	0x6372732f
+  2e:	75626c2f          	.4byte	0x75626c2f
+  32:	612d                	.2byte	0x612d
+  34:	696c                	.2byte	0x696c
+  36:	302d6e67          	.4byte	0x302d6e67
+  3a:	2e31                	.2byte	0x2e31
+  3c:	75642f53          	.4byte	0x75642f53
+  40:	0074                	.2byte	0x74
+  42:	6d6f682f          	.4byte	0x6d6f682f
+  46:	2f65                	.2byte	0x2f65
+  48:	6578                	.2byte	0x6578
+  4a:	6c2d                	.2byte	0x6c2d
+  4c:	7470                	.2byte	0x7470
+  4e:	372d                	.2byte	0x372d
+  50:	2f31                	.2byte	0x2f31
+  52:	6f44                	.2byte	0x6f44
+  54:	656d7563          	bgeu	s10,s6,69e <offset+0x66e>
+  58:	746e                	.2byte	0x746e
+  5a:	65542f73          	csrrs	t5,0x655,s0
+  5e:	722f7473          	csrrci	s0,0x722,30
+  62:	7369                	.2byte	0x7369
+  64:	612d7663          	bgeu	s10,s2,670 <offset+0x640>
+  68:	6372                	.2byte	0x6372
+  6a:	2d68                	.2byte	0x2d68
+  6c:	6574                	.2byte	0x6574
+  6e:	722f7473          	csrrci	s0,0x722,30
+  72:	7369                	.2byte	0x7369
+  74:	742d7663          	bgeu	s10,sp,7c0 <offset+0x790>
+  78:	7365                	.2byte	0x7365
+  7a:	2d74                	.2byte	0x2d74
+  7c:	74697573          	csrrci	a0,0x746,18
+  80:	2f65                	.2byte	0x2f65
+  82:	7672                	.2byte	0x7672
+  84:	5f693233          	.4byte	0x5f693233
+  88:	2f6d                	.2byte	0x2f6d
+  8a:	2f49                	.2byte	0x2f49
+  8c:	00637273          	csrrci	tp,0x6,6
+  90:	626c                	.2byte	0x626c
+  92:	2d75                	.2byte	0x2d75
+  94:	6c61                	.2byte	0x6c61
+  96:	6769                	.2byte	0x6769
+  98:	2d6e                	.2byte	0x2d6e
+  9a:	3130                	.2byte	0x3130
+  9c:	532e                	.2byte	0x532e
 	...
 
 Disassembly of section .debug_info:
 
 00000000 <.debug_info>:
-   0:	0021                	c.nop	8
-   2:	0000                	unimp
-   4:	0005                	c.nop	1
-   6:	0401                	addi	s0,s0,0
-   8:	0000                	unimp
-   a:	0000                	unimp
-   c:	0001                	nop
-   e:	0000                	unimp
-  10:	0000                	unimp
-  12:	0800                	addi	s0,sp,16
-  14:	e400                	fsw	fs0,8(s0)
-  16:	0008                	0x8
-  18:	0000                	unimp
-  1a:	5700                	lw	s0,40(a4)
-  1c:	0000                	unimp
-  1e:	9300                	0x9300
-  20:	0000                	unimp
-  22:	0100                	addi	s0,sp,128
+   0:	0021                	.2byte	0x21
+   2:	0000                	.2byte	0x0
+   4:	0005                	.2byte	0x5
+   6:	0401                	.2byte	0x401
+   8:	0000                	.2byte	0x0
+   a:	0000                	.2byte	0x0
+   c:	0001                	.2byte	0x1
+   e:	0000                	.2byte	0x0
+  10:	0000                	.2byte	0x0
+  12:	0800                	.2byte	0x800
+  14:	e400                	.2byte	0xe400
+  16:	0008                	.2byte	0x8
+  18:	0000                	.2byte	0x0
+  1a:	5d00                	.2byte	0x5d00
+  1c:	0000                	.2byte	0x0
+  1e:	9f00                	.2byte	0x9f00
+  20:	0000                	.2byte	0x0
+  22:	0100                	.2byte	0x100
   24:	80              	Address 0x0000000000000024 is out of bounds.
 
 
 Disassembly of section .debug_abbrev:
 
 00000000 <.debug_abbrev>:
-   0:	1101                	addi	sp,sp,-32
-   2:	1000                	addi	s0,sp,32
+   0:	1101                	.2byte	0x1101
+   2:	1000                	.2byte	0x1000
    4:	12011117          	auipc	sp,0x12011
-   8:	1b0e030f          	0x1b0e030f
-   c:	250e                	fld	fa0,192(sp)
-   e:	130e                	slli	t1,t1,0x23
-  10:	0005                	c.nop	1
+   8:	1b0e030f          	.4byte	0x1b0e030f
+   c:	250e                	.2byte	0x250e
+   e:	130e                	.2byte	0x130e
+  10:	0005                	.2byte	0x5
 	...
 
 Disassembly of section .debug_aranges:
 
 00000000 <.debug_aranges>:
-   0:	001c                	0x1c
-   2:	0000                	unimp
-   4:	0002                	c.slli64	zero
-   6:	0000                	unimp
-   8:	0000                	unimp
-   a:	0004                	0x4
-   c:	0000                	unimp
-   e:	0000                	unimp
-  10:	0000                	unimp
-  12:	0008                	0x8
-  14:	0444                	addi	s1,sp,516
+   0:	001c                	.2byte	0x1c
+   2:	0000                	.2byte	0x0
+   4:	0002                	.2byte	0x2
+   6:	0000                	.2byte	0x0
+   8:	0000                	.2byte	0x0
+   a:	0004                	.2byte	0x4
+   c:	0000                	.2byte	0x0
+   e:	0000                	.2byte	0x0
+  10:	0000                	.2byte	0x0
+  12:	0008                	.2byte	0x8
+  14:	0444                	.2byte	0x444
 	...
 
 Disassembly of section .debug_str:
 
 00000000 <.debug_str>:
-   0:	6d6f682f          	0x6d6f682f
-   4:	2f65                	jal	7bc <offset+0x78c>
-   6:	6f6d                	lui	t5,0x1b
-   8:	6d2f6e6f          	jal	t3,f66da <_end+0x7443a>
-   c:	5f6e6f6f          	jal	t5,e6602 <_end+0x64362>
-  10:	6576                	flw	fa0,92(sp)
-  12:	6972                	flw	fs2,28(sp)
-  14:	5f66                	lw	t5,120(sp)
-  16:	7335                	lui	t1,0xfffed
-  18:	7369722f          	0x7369722f
-  1c:	612d7663          	bgeu	s10,s2,628 <offset+0x5f8>
-  20:	6372                	flw	ft6,28(sp)
-  22:	2d68                	fld	fa0,216(a0)
-  24:	6574                	flw	fa3,76(a0)
-  26:	722f7473          	csrrci	s0,0x722,30
-  2a:	7369                	lui	t1,0xffffa
-  2c:	742d7663          	bgeu	s10,sp,778 <offset+0x748>
-  30:	7365                	lui	t1,0xffff9
-  32:	2d74                	fld	fa3,216(a0)
-  34:	74697573          	csrrci	a0,0x746,18
-  38:	2f65                	jal	7f0 <offset+0x7c0>
-  3a:	7672                	flw	fa2,60(sp)
-  3c:	5f693233          	0x5f693233
-  40:	2f6d                	jal	7fa <offset+0x7ca>
-  42:	2f49                	jal	7d4 <offset+0x7a4>
-  44:	2f637273          	csrrci	tp,0x2f6,6
-  48:	626c                	flw	fa1,68(a2)
-  4a:	2d75                	jal	706 <offset+0x6d6>
-  4c:	6c61                	lui	s8,0x18
-  4e:	6769                	lui	a4,0x1a
-  50:	2d6e                	fld	fs10,216(sp)
-  52:	3130                	fld	fa2,96(a0)
-  54:	532e                	lw	t1,232(sp)
-  56:	2f00                	fld	fs0,24(a4)
-  58:	6f68                	flw	fa0,92(a4)
-  5a:	656d                	lui	a0,0x1b
-  5c:	6f6f6d2f          	0x6f6f6d2f
-  60:	2f6e                	fld	ft10,216(sp)
-  62:	6f6d                	lui	t5,0x1b
-  64:	765f6e6f          	jal	t3,f6fc8 <_end+0x74d28>
-  68:	7265                	lui	tp,0xffff9
-  6a:	6669                	lui	a2,0x1a
-  6c:	355f 2f73 6972      	0x69722f73355f
-  72:	666f6373          	csrrsi	t1,0x666,30
-  76:	775f 726f 2f6b      	0x2f6b726f775f
-  7c:	2f637273          	csrrci	tp,0x2f6,6
-  80:	626c                	flw	fa1,68(a2)
-  82:	2d75                	jal	73e <offset+0x70e>
-  84:	6c61                	lui	s8,0x18
-  86:	6769                	lui	a4,0x1a
-  88:	2d6e                	fld	fs10,216(sp)
-  8a:	3130                	fld	fa2,96(a0)
-  8c:	532e                	lw	t1,232(sp)
-  8e:	7475642f          	0x7475642f
-  92:	4700                	lw	s0,8(a4)
-  94:	554e                	lw	a0,240(sp)
-  96:	4120                	lw	s0,64(a0)
-  98:	2e322053          	0x2e322053
-  9c:	          	snez	s2,zero
+   0:	6d6f682f          	.4byte	0x6d6f682f
+   4:	2f65                	.2byte	0x2f65
+   6:	6578                	.2byte	0x6578
+   8:	6c2d                	.2byte	0x6c2d
+   a:	7470                	.2byte	0x7470
+   c:	372d                	.2byte	0x372d
+   e:	2f31                	.2byte	0x2f31
+  10:	6f44                	.2byte	0x6f44
+  12:	656d7563          	bgeu	s10,s6,65c <offset+0x62c>
+  16:	746e                	.2byte	0x746e
+  18:	65542f73          	csrrs	t5,0x655,s0
+  1c:	722f7473          	csrrci	s0,0x722,30
+  20:	7369                	.2byte	0x7369
+  22:	612d7663          	bgeu	s10,s2,62e <offset+0x5fe>
+  26:	6372                	.2byte	0x6372
+  28:	2d68                	.2byte	0x2d68
+  2a:	6574                	.2byte	0x6574
+  2c:	722f7473          	csrrci	s0,0x722,30
+  30:	7369                	.2byte	0x7369
+  32:	742d7663          	bgeu	s10,sp,77e <offset+0x74e>
+  36:	7365                	.2byte	0x7365
+  38:	2d74                	.2byte	0x2d74
+  3a:	74697573          	csrrci	a0,0x746,18
+  3e:	2f65                	.2byte	0x2f65
+  40:	7672                	.2byte	0x7672
+  42:	5f693233          	.4byte	0x5f693233
+  46:	2f6d                	.2byte	0x2f6d
+  48:	2f49                	.2byte	0x2f49
+  4a:	2f637273          	csrrci	tp,0x2f6,6
+  4e:	626c                	.2byte	0x626c
+  50:	2d75                	.2byte	0x2d75
+  52:	6c61                	.2byte	0x6c61
+  54:	6769                	.2byte	0x6769
+  56:	2d6e                	.2byte	0x2d6e
+  58:	3130                	.2byte	0x3130
+  5a:	532e                	.2byte	0x532e
+  5c:	2f00                	.2byte	0x2f00
+  5e:	6f68                	.2byte	0x6f68
+  60:	656d                	.2byte	0x656d
+  62:	2d65782f          	.4byte	0x2d65782f
+  66:	706c                	.2byte	0x706c
+  68:	2d74                	.2byte	0x2d74
+  6a:	442f3137          	lui	sp,0x442f3
+  6e:	6d75636f          	jal	t1,56f44 <offset+0x56f14>
+  72:	6e65                	.2byte	0x6e65
+  74:	7374                	.2byte	0x7374
+  76:	7365542f          	.4byte	0x7365542f
+  7a:	2f74                	.2byte	0x2f74
+  7c:	6972                	.2byte	0x6972
+  7e:	666f6373          	csrrsi	t1,0x666,30
+  82:	775f 726f 2f6b      	.byte	0x5f, 0x77, 0x6f, 0x72, 0x6b, 0x2f
+  88:	2f637273          	csrrci	tp,0x2f6,6
+  8c:	626c                	.2byte	0x626c
+  8e:	2d75                	.2byte	0x2d75
+  90:	6c61                	.2byte	0x6c61
+  92:	6769                	.2byte	0x6769
+  94:	2d6e                	.2byte	0x2d6e
+  96:	3130                	.2byte	0x3130
+  98:	532e                	.2byte	0x532e
+  9a:	7475642f          	.4byte	0x7475642f
+  9e:	4700                	.2byte	0x4700
+  a0:	554e                	.2byte	0x554e
+  a2:	4120                	.2byte	0x4120
+  a4:	2e322053          	.4byte	0x2e322053
+  a8:	33 39 00            	Address 0x00000000000000a8 is out of bounds.
+

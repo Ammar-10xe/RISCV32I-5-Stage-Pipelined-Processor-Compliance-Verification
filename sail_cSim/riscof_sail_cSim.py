@@ -34,7 +34,7 @@ class sail_cSim(pluginTemplate):
         self.work_dir = work_dir
         self.objdump_cmd = 'riscv64-unknown-elf-objdump -D {0} > {1}.disass;'
         self.compile_cmd = 'riscv64-unknown-elf-gcc -march={0} \
-         -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles\
+         -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles\
          -T '+self.pluginpath+'/env/link.ld\
          -I '+self.pluginpath+'/env/\
          -I ' + archtest_env

@@ -59491,29 +59491,29 @@ Disassembly of section .tohost:
 Disassembly of section .data:
 
 8003a000 <rvtest_data_begin>:
-8003a000:	cafe                	sw	t6,84(sp)
-8003a002:	babe                	fsd	fa5,368(sp)
-8003a004:	cafe                	sw	t6,84(sp)
-8003a006:	babe                	fsd	fa5,368(sp)
-8003a008:	cafe                	sw	t6,84(sp)
-8003a00a:	babe                	fsd	fa5,368(sp)
-8003a00c:	cafe                	sw	t6,84(sp)
-8003a00e:	babe                	fsd	fa5,368(sp)
+8003a000:	cafe                	.2byte	0xcafe
+8003a002:	babe                	.2byte	0xbabe
+8003a004:	cafe                	.2byte	0xcafe
+8003a006:	babe                	.2byte	0xbabe
+8003a008:	cafe                	.2byte	0xcafe
+8003a00a:	babe                	.2byte	0xbabe
+8003a00c:	cafe                	.2byte	0xcafe
+8003a00e:	babe                	.2byte	0xbabe
 
 8003a010 <rvtest_data_end>:
 	...
 
 8003a100 <begin_regstate>:
-8003a100:	0080                	addi	s0,sp,64
+8003a100:	0080                	.2byte	0x80
 	...
 
 8003a200 <end_regstate>:
-8003a200:	0004                	0x4
+8003a200:	0004                	.2byte	0x4
 	...
 
 8003a210 <begin_signature>:
-8003a210:	a309                	j	8003a712 <signature_x4_0+0x4aa>
-8003a212:	6f5c                	flw	fa5,28(a4)
+8003a210:	a309                	.2byte	0xa309
+8003a212:	6f5c                	.2byte	0x6f5c
 
 8003a214 <signature_x1_0>:
 8003a214:	deadbeef          	jal	t4,800157fe <inst_219+0x736>
@@ -60112,20 +60112,20 @@ Disassembly of section .data:
 8003ab48:	deadbeef          	jal	t4,80016132 <inst_223+0x2de>
 
 8003ab4c <sig_end_canary>:
-8003ab4c:	a309                	j	8003b04e <_end+0x4fe>
-8003ab4e:	6f5c                	flw	fa5,28(a4)
+8003ab4c:	a309                	.2byte	0xa309
+8003ab4e:	6f5c                	.2byte	0x6f5c
 
 Disassembly of section .riscv.attributes:
 
 00000000 <.riscv.attributes>:
-   0:	1941                	addi	s2,s2,-16
-   2:	0000                	unimp
-   4:	7200                	flw	fs0,32(a2)
-   6:	7369                	lui	t1,0xffffa
+   0:	1941                	.2byte	0x1941
+   2:	0000                	.2byte	0x0
+   4:	7200                	.2byte	0x7200
+   6:	7369                	.2byte	0x7369
    8:	01007663          	bgeu	zero,a6,14 <num+0x7>
    c:	0000000f          	fence	unknown,unknown
-  10:	7205                	lui	tp,0xfffe1
-  12:	3376                	fld	ft6,376(sp)
-  14:	6932                	flw	fs2,12(sp)
-  16:	7032                	flw	ft0,44(sp)
-  18:	0030                	addi	a2,sp,8
+  10:	7205                	.2byte	0x7205
+  12:	3376                	.2byte	0x3376
+  14:	6932                	.2byte	0x6932
+  16:	7032                	.2byte	0x7032
+  18:	0030                	.2byte	0x30
