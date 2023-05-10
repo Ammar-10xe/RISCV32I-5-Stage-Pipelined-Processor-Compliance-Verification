@@ -135,18 +135,30 @@ Please give the complete PATH to create a symbolic link for example in my case i
 Remember, creating a **symbolic link** in a directory in your PATH will allow you to run a program/command located in another directory as if it were in your PATH. It won't add the entire directory to your PATH. If you want to add an entire directory to your PATH, you need to modify your shell's configuration file (like `~/.bashrc` or `~/.bash_profile` for the bash shell, `~/.zshrc` for zsh shell).
 
 
+## Command Line Interface 
+I have used the ModelSim's command line interface for compiling and simulating SystemVerilog (`.sv`) files.
 
-It is always good to read the documentation first. So make sure to check the usage of these commands.  
-   v[sim](http://www.pldworld.com/_hdl/2/_ref/se_html/manual_html/c_vcmds191.html) and   [vlog](http://www.pldworld.com/_hdl/2/_ref/se_html/manual_html/c_vcmds188.html)
+1.  `vlog *.sv`: The `vlog` command is used for compiling Verilog/SystemVerilog files. The `*.sv` argument tells it to compile all `.sv` files in the current directory.
+    
+2.  `vsim -c -do "run -all" TopLevel_tb +sig=result.txt +mem_init=dut.hex`: The `vsim` command is used to simulate compiled Verilog/SystemVerilog designs.
+    
+    -   `-c`: This option tells ModelSim to run in command line mode (without GUI).
+    -   `-do "run -all"`: This option tells ModelSim to execute the command `run -all` immediately after loading the design. The `run -all` command starts the simulation and runs it until there are no more events to process.
+    -   `TopLevel_tb`: This is the name of the top-level module of the testbench.
+    -   `+sig=result.txt +mem_init=demo.hex`: These are simulation arguments. 
+   3. `$value$plusargs` is a system function in Verilog and SystemVerilog that is used to read command-line arguments passed to the simulator. This function is often used to set configuration or control values at simulation runtime. It allows you to change certain variables without having to recompile your simulat 
 
-The RISC-V architecture tests are a suite of tests designed to ensure that a RISC-V CPU implementation conforms to the official RISC-V specification. These tests are important for guaranteeing the correct behavior of RISC-V implementations, and they cover a range of functionality, from basic instruction behavior to more complex features such as interrupts and exceptions.
+It is always good habit to read the documentation. So make sure to check the usage of these commands.  
+   [vsim](http://www.pldworld.com/_hdl/2/_ref/se_html/manual_html/c_vcmds191.html) ,  [vlog](http://www.pldworld.com/_hdl/2/_ref/se_html/manual_html/c_vcmds188.html)  and  [value$plusargs](https://www.chipverify.com/systemverilog/systemverilog-command-line-input)
+
+
 ## RISCV ARCH Tests
 
 The RISC-V architecture tests are open-source and can be found on the [RISC-V Architectural Tests GitHub repository](https://github.com/riscv/riscv-arch-test). Clone the riscv arch tests using 
 
     git clone https://github.com/riscv-non-isa/riscv-arch-test.git
 
-The tests are divided into different categories:
+The RISC-V architecture tests are a suite of tests designed to ensure that a RISC-V CPU implementation conforms to the official RISC-V specification. These tests are important for guaranteeing the correct behavior of RISC-V implementations, and they cover a range of functionality, from basic instruction behavior to more complex features such as interrupts and exceptions. The tests are divided into different categories:
 
 -   **RV32I**: Base Integer Instruction Set (32-bit)
 -   **RV64I**: Base Integer Instruction Set (64-bit)
