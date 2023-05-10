@@ -1,3 +1,10 @@
+
+
+# **DataPath followed**
+
+The following datapath has been followed for the implementation of RV32I 5 Staged Pipelined Processor 
+ ![image](https://user-images.githubusercontent.com/104595329/235644200-67e40eca-e6f1-48f5-b0ee-ef27077dd0df.png)
+
 # 5_Stage_Pipeline_RV32I_Compliance_Verification
 RV32I stands for RISC-V 32 bit Integer Type Processor. It is a basic processor in which other extensions i.e M(Multiplication), F(Floating Point) etc can be added.
 The following types of instructions are supported by this processor:
@@ -7,20 +14,127 @@ The following types of instructions are supported by this processor:
 - U Type (LUI, AUIPC)
 - J Type (JAL)
 - B Type (BEQ, BNE, BLT, BGE, BLTU, BGEU)
-> **Note:** RTL folder in this repo contains the design system verilog files for this processor.
 
+> **Note:** RTL folder in this repo contains the design system verilog files for this processor.
 
 ## Compliance Testing
 
 Compliance testing is **to check whether the processor under development meets the open RISC-V standards or not**. There are some tests available online that tries to cover the corner cases of all the instructions type listed above. These tests are contributed by open source community and are updated from time to time. In order to call your design to be fully complianced with RISC-V International Standards, one should pass all these tests successfully. These tests are available online by the name riscv-non-isa arch test.
 > **Note:** riscv-arch-test folder in this repo contains the tests that we have passed by our processor.
 
-
 ## Framework for Testing
-RISCOF framework is used which is a python based framework that enables testing of a RISC-V target (hard or soft implementations) against a standard RISC-V golden reference model using a suite of RISC-V architectural assembly tests.
+RISCOF framework is used which is a python based framework that enables testing of a RISC-V target (hard or soft implementations) against a standard RISC-V golden reference model using a suite of RISC-V architectural assembly tests.For more information please visit [RISCOF](https://riscof.readthedocs.io/en/latest/intro.html) 
 > In our case, we have compared our designed RTL  with golden reference model named sail
 
 ## Result
 
 Using riscof framework generates a report that shows how many tests are passed and how many failed. You can find the report in riscof_work/report.html. As the report is in HTML language so you need to render it for better view if you want to see the result or you can click the [View Rendered HTML](https://htmlpreview.github.io/?https://github.com/Ammarkhan561/RISCV32I-5-Stage-Pipelined-Processor-Compliance-Verification/blob/main/riscof_work/report.html)
  to see the rendered report.
+ 
+# # Quickstart
+
+## RISCV-GNU Toolchain
+Though, we can [build](https://github.com/riscv-collab/riscv-gnu-toolchain) the toolchain from source or use the [pre-build](https://github.com/riscv-collab/riscv-gnu-toolchain/releases/tag/2022.10.11) toolchain. But don't require customize fancy features of the toolchain for application. The following command suffice. Run it to install the toolchain.
+
+    sudo apt-get install gcc-riscv64-unknown-elf
+If this did not work you can download any latest version of pre-compiled toolchain from  [RISCV-GNU Toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain/releases/tag/2022.10.11) and make sure to add the path `/path/to/install` to your  $PATH in the .bashrc/zshrc with this you should now have all the following available as command line arguments:
+
+    riscv32-unknown-elf-addr2line      riscv32-unknown-elf-elfedit
+    riscv32-unknown-elf-ar             riscv32-unknown-elf-g++
+    riscv32-unknown-elf-as             riscv32-unknown-elf-gcc
+    riscv32-unknown-elf-c++            riscv32-unknown-elf-gcc-8.3.0
+    riscv32-unknown-elf-c++filt        riscv32-unknown-elf-gcc-ar
+    riscv32-unknown-elf-cpp            riscv32-unknown-elf-gcc-nm
+    riscv32-unknown-elf-gcc-ranlib     riscv32-unknown-elf-gprof
+    riscv32-unknown-elf-gcov           riscv32-unknown-elf-ld
+    riscv32-unknown-elf-gcov-dump      riscv32-unknown-elf-ld.bfd
+    riscv32-unknown-elf-gcov-tool      riscv32-unknown-elf-nm
+    riscv32-unknown-elf-gdb            riscv32-unknown-elf-objcopy
+    riscv32-unknown-elf-gdb-add-index  riscv32-unknown-elf-objdump
+    riscv32-unknown-elf-ranlib         riscv32-unknown-elf-readelf
+    riscv32-unknown-elf-run            riscv32-unknown-elf-size
+    riscv32-unknown-elf-strings        riscv32-unknown-elf-strip
+
+
+## Verilog Simulator
+An HDL Simulator is required that can simulate Verilog (or System Verilog designs). We have the following options.
+
+### Icarus
+:warning: It only works for Verilog designs and may not for System.
+
+Run the following commands to install Icarus Verilog and GTK wave to view the waveform.
+
+    sudo apt­get install iverilog
+    sudo apt­get install gtkwave
+
+### Verilator
+Run the following command to install [Verilator](https://verilator.org/guide/latest/).
+
+    sudo apt-get install verilator
+
+### Modelsim
+Modelsim Setup Lite Edition will be provided on the spot. Refer the [guide](https://profile.iiita.ac.in/bibhas.ghoshal/COA_2020/Lab/ModelSim%20Linux%20installation.html) to install the Modelsim on Linux. 
+
+:warning: Remember that we need to have the ability to complile and simulate the design using command line interface (CLI). [User manual](https://www.microsemi.com/document-portal/doc_view/131619-modelsim-user) contains the instructions for that.
+
+## RISCOF 
+
+[RISCOF](https://riscof.readthedocs.io/en/stable/) is the standard RISC-V Compliance testing framework. Run the following commands to install RISCOF.
+
+    sudo apt-get -y install python3-pip
+    sudo apt-get install -y python3-setuptools
+    pip3 install git+https://github.com/riscv/riscof.git
+
+## Install Plugin Models
+
+  [SAIL-riscv](https://github.com/riscv/sail-riscv) is the Golden reference model for RISC-V architecture.Run the following commands to setup the model.
+
+    $ sudo apt-get install opam  build-essential libgmp-dev z3 pkg-config zlib1g-dev
+    $ opam init -y --disable-sandboxing
+    $ opam switch create ocaml-base-compiler.4.06.1
+    $ opam install sail -y
+    $ eval $(opam config env)
+    $ git clone https://github.com/riscv/sail-riscv.git
+    $ cd sail-riscv
+    $ make
+    $ ARCH=RV32 make
+    $ ARCH=RV64 make
+    $ ln -s sail-riscv/c_emulator/riscv_sim_RV64 /usr/bin/riscv_sim_RV64
+    $ ln -s sail-riscv/c_emulator/riscv_sim_RV32 /usr/bin/riscv_sim_RV32
+    
+Please give the complete PATH to create a symbolic link for example in my case it was `sudo ln -s /home/xe-lpt-71/sail-riscv/c_emulator/sail-riscv/c_emulator/riscv_sim_RV32 /usr/bin/riscv_sim_RV32\n` After adding the symbolic link verify it using `riscv_sim_RV32`or `riscv_sim_RV64` the output of this should be
+
+    No elf file provided.
+    Usage: riscv_sim_RV32 [options] <elf_file>
+    	 -d	 --enable-dirty-update
+    	 -m	 --enable-misaligned
+    	 -P	 --enable-pmp
+    	 -N	 --enable-next
+    	 -z	 --ram-size
+    	 -C	 --disable-compressed
+    	 -I	 --disable-writable-misa
+    	 -F	 --disable-fdext
+    	 -i	 --mtval-has-illegal-inst-bits
+    	 -b	 --device-tree-blob
+    	 -t	 --terminal-log
+    	 -p	 --show-times
+    	 -a	 --report-arch
+    	 -T	 --test-signature
+    	 -g	 --signature-granularity
+    	 -h	 --help
+    	 -v	 --trace
+    	 -V	 --no-trace
+    	 -l	 --inst-limit
+    	 -x	 --enable-zfinx
+
+Remember, creating a symbolic link in a directory in your PATH will allow you to run a program/command located in another directory as if it were in your PATH. It won't add the entire directory to your PATH. If you want to add an entire directory to your PATH, you need to modify your shell's configuration file (like `~/.bashrc` or `~/.bash_profile` for the bash shell, `~/.zshrc` for zsh shell).
+
+## RISCOF Commands
+You can use the following commands to run this repo on you computer and verify it on your side as well 
+`riscof setup --dutname=dutname` 
+
+
+
+
+
+
